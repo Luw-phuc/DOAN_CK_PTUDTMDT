@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,30 +22,33 @@
           placeholder="Tìm kiếm ..."
         />
         <button class="absolute right-3 h-6">
-          <img src="{search}" class="h-full w-auto" />
+          <img src="./assets/images/search.png" class="h-full w-auto" />
         </button>
       </div>
       <div class="flex items-center gap-4">
-        <button class="rounded-lg border bg-blue-400 px-6 py-2 font-bold">
-          Login
-        </button>
-        <button class="rounded-lg border bg-green-400 px-6 py-2 font-bold">
-          Register
-        </button>
+        <?php
+          if (isset($_SESSION["user_name"])) {
+            echo "<a href='cart.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Cart</button></a>";
+            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Log Out</button></form>";
+          } else {
+            echo "<button id='btn_login' class='rounded-lg border bg-blue-400 px-6 py-2 font-bold'>Login</button>";
+            echo "<button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Register</button>";
+          }
+        ?>
       </div>
     </div>
     <div class="bg-[#FFEAEA]">
       <ul
         class="mt-2 flex items-center justify-around py-4 text-2xl font-bold text-[#CE112D]"
       >
-        <li>Trang chủ</li>
-        <li>Bài viết</li>
-        <li>Cửa hàng</li>
-        <li>Về chúng tôi</li>
-        <li>Tin tức</li>
+        <li><a href="index.php">Trang chủ</a></li>
+        <li><a href="product-list.php">Cửa hàng</a></li>
+        <li><a href="blog.html">Tin tức</a></li>
+        <li><a href="about.html">Về chúng tôi</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
       </ul>
     </div>
-    <!-- header -->
+    <!-- end header -->
 
     <div class="flex justify-between mt-10 px-4 mx-auto max-w-screen-xl">
       <article class="mx-auto w-full">
