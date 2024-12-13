@@ -132,7 +132,7 @@ session_start();
     <div class="container">
         <div class="section">
             <div class="banner">
-                <img src="/assets/About/cover-about.png" alt="Usbibracelet Banner">
+                <img src="./assets/About/cover-about.png" alt="Usbibracelet Banner">
             </div>
             <h2>Về Usbibracelet và Vòng tay Italian Charm Bracelet</h2>
             <p>Usbibracelet được thành lập năm 2024 với mong muốn đồng hành cùng bạn trên hành trình khẳng định phong cách cá nhân, 
@@ -148,7 +148,7 @@ session_start();
              bạn có thể kể nên câu chuyện của riêng mình, ghi dấu từng khoảnh khắc đáng nhớ và trân quý từng kỷ niệm.</p>
         </div>
         <div class="anh">
-            <img src="/assets/About/anhabout.jpg" alt="anh">
+            <img src="./assets/About/anhabout.jpg" alt="anh">
         </div>
 
         <div class="section">
