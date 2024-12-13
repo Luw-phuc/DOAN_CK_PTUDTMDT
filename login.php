@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
   </head>
   <body>
     <div class="grid w-screen grid-cols-2 bg-white">
       <div class="flex h-screen w-full items-center justify-center">
         <img
-          alt="Decorative image with leaves, magnifying glass, and geometric shapes"
+          alt="usbi"
           class="h-[80%] w-auto object-fill"
-          src="https://storage.googleapis.com/a1aa/image/GeCSos7EqVQ8PibrF6ETcHtxqugsKbeuyho8VdLoL2UXxa3TA.jpg"
+          src="./assets/login/loginbia.png"
         />
       </div>
       <div class="flex w-4/5 flex-col items-center justify-center">
