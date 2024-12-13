@@ -162,29 +162,29 @@ session_start();
     <div class="w-4/5 mx-auto">
       <div class="flex gap-5">
         <div class="h-10 w-5 bg-red-500"></div>
-        <h1 class="font-bold text-3xl">Hướng dẫn</h1>
+        <h1 class="font-bold text-3xl">Sản phẩm</h1>
       </div>
 
       <div class="col-span-8">
-    <p class="text-2xl font-bold text-[#CE112D]">TẤT CẢ SẢN PHẨM</p>
+    <p class="mt-5 text-[#CE112D] font-semibold text-3xl mb-5">BEST SELLER</p>
     <div class="mt-3 grid grid-cols-4 gap-x-6 gap-y-1">
       <div id="product-detail" class="h-96 w-72 rounded-sm border bg-slate-200">
             <div
               class="h-3/4 w-full"
-            > <img src="./assets/images/Charmchonam/Charm logo Ferrari 59k.jpg" />
+            > <img src="./assets/images/Charmchonam/Charm Logo Ferrari 59k.jpg" />
           </div>
             <div class="mt-3 px-3">
-              <a href="product-detail.php?productId=1" class="font-bold">Classic Bracelet</a>
-              <p class="mt-1">5.000.000 VND</p>
+              <a href="product-detail.php?productId=1" class="font-bold">Logo Ferrari</a>
+              <p class="mt-1">59.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.svg" />
                 </div>
-                <p class="translate-y-0.5">(30)</p>
+                <p class="translate-y-0.5">(25)</p>
               </div>
             </div>
           </div>
@@ -193,14 +193,14 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmchonu/Charm hoa Tulip hồng 55k.jpg"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">Classic Bracelet</p>
-              <p class="mt-1">5.000.000 VND</p>
+              <p class="font-bold">Hoa Tulip hồng</p>
+              <p class="mt-1">55.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.svg" />
                 </div>
                 <p class="translate-y-0.5">(30)</p>
@@ -212,17 +212,17 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Samplemixsan/Vòng tay Sample Family 499k.png"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">Classic Bracelet</p>
-              <p class="mt-1">5.000.000 VND</p>
+              <p class="font-bold">Vòng tay Sample Family</p>
+              <p class="mt-1">499.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.svg" />
-                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
                 </div>
-                <p class="translate-y-0.5">(30)</p>
+                <p class="translate-y-0.5">(29)</p>
               </div>
             </div>
           </div>
@@ -231,17 +231,17 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmdai/Charm I Love My Family 89k.png"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">Classic Bracelet</p>
-              <p class="mt-1">5.000.000 VND</p>
+              <p class="font-bold">I Love My Family</p>
+              <p class="mt-1">89.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.png" />
                   <img src="./assets/images/star.svg" />
                 </div>
-                <p class="translate-y-0.5">(30)</p>
+                <p class="translate-y-0.5">(17)</p>
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@ session_start();
         alt="Charm cho nam"
       />
     </div>
-    <p class="mt-2 text-lg text-center">Nắm bắt hai đầu của Charm bạn muốn tách và tháo chúng ra</p>
+    <p class="mt-2 text-lg text-center">Nắm bắt hai đầu của charm muốn tách và tháo ra</p>
   </div>
   <div class="flex flex-col items-center">
     <div class="w-full aspect-w-1 aspect-h-1">
