@@ -110,7 +110,7 @@ session_start();
     <div class="relative mx-auto h-[520px] w-4/5">
       <img
         class="h-full w-full object-fill"
-        src="https://static.vecteezy.com/system/resources/previews/022/460/209/non_2x/a-computer-desktop-wallpaper-for-forex-trading-terminal-ai-generative-desktop-background-free-photo.jpg"
+        src="./assets/Cuahang/bannertrangcuahang.png"
       />
       <button
         class="absolute bottom-10 right-20 rounded-md bg-[#CE112D] px-5 py-2 font-bold text-white"
