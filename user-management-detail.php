@@ -36,45 +36,45 @@ if (isset($_GET['account_id'])) {
   <body class="bg-gray-100">
     <div class="flex h-screen">
       <!-- Sidebar -->
-      <div class="bg-gray-900 h-vh text-white w-64 space-y-6 py-7 px-2">
+      <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
             class="h-8 w-8"
-            height="30"
-            src="https://storage.googleapis.com/a1aa/image/FEJbZin0JpKKJNiVCRapiITHPGQisQ0ejxFpXqiVNl0eOZ5TA.jpg"
-            width="30"
+            height="20"
+            src="./assets/user/logo.png"
+            width="40"
           />
-          <span class="text-2xl font-extrabold"> Usbibracelet </span>
+          <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
         </div>
         <nav class="space-y-2">
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="user-management.php"
           >
             <i class="fas fa-tachometer-alt"> </i>
-            USER
+            NGƯỜI DÙNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="product-management.php"
           >
             <i class="fas fa-cube"> </i>
-            PRODUCT
+            SẢN PHẨM
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="#"
           >
             <i class="fas fa-table"> </i>
-            ORDER
+            ĐƠN HÀNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="#"
           >
             <i class="fas fa-edit"> </i>
-            BLOG
+            TIN TỨC
           </a>
         </nav>
       </div>
@@ -87,7 +87,7 @@ if (isset($_GET['account_id'])) {
           <div class="flex items-center">
             <input
               class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none"
-              placeholder="Search"
+              placeholder="Tìm kiếm"
               type="text"
             />
           </div>
@@ -97,14 +97,14 @@ if (isset($_GET['account_id'])) {
               alt="User Avatar"
               class="h-8 w-8 rounded-full"
               height="30"
-              src="https://storage.googleapis.com/a1aa/image/MTKO2Sffe3GPdpV1fFlPEDfTgoIYJnACU6dUPZ54eGAyuTWeJA.jpg"
+              src="./assets/user/avatar.jpg"
               width="30"
             />
           </div>
         </header>
         <!-- Dashboard content -->
-        <main class="flex-1 bg-gray-100 p-6">
-          <h1 class="text-2xl font-semibold mb-6">User Form</h1>
+        <main class="flex-1 bg-white p-6">
+          <h1 class="text-3xl font-semibold mb-6">Biểu mẫu người dùng</h1>
           <div class="bg-white w-[800px] mx-auto py-5 px-10 rounded-lg shadow-md overflow-hidden">
             <form class="" action="include/user-management-detail.inc.php" method="POST">
               <!-- ID Field -->
@@ -116,7 +116,7 @@ if (isset($_GET['account_id'])) {
                     id="id"
                     name="id"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
-                    placeholder="Enter ID"
+                    placeholder="Nhập ID"
                     value="<?= $account['id'] ?>"
                   />
                 </div><!-- Email Field -->
@@ -127,7 +127,7 @@ if (isset($_GET['account_id'])) {
                     id="email"
                     name="email"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
-                    placeholder="Enter Email"
+                    placeholder="Nhập Email"
                     value="<?= $account['email'] ?>"
                     required
                   />
@@ -136,26 +136,26 @@ if (isset($_GET['account_id'])) {
               <div class="grid grid-cols-2 items-center gap-10">
                 <!-- First Name Field -->
                 <div class="mb-4">
-                  <label for="firstname" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                  <label for="firstname" class="block text-sm font-medium text-gray-700 mb-1">Họ</label>
                   <input
                     type="text"
                     id="firstname"
                     name="firstname"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
-                    placeholder="Enter First Name"
+                    placeholder="Nhập Họ"
                     value="<?= $account['firstname'] ?>"
                     required
                   />
                 </div>
                 <!-- Last Name Field -->
                 <div class="mb-4">
-                  <label for="lastname" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                  <label for="lastname" class="block text-sm font-medium text-gray-700 mb-1">Tên</label>
                   <input
                     type="text"
                     id="lastname"
                     name="lastname"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
-                    placeholder="Enter Last Name"
+                    placeholder="Nhập tên"
                     value="<?= $account['lastname'] ?>"
                     required
                   />
@@ -163,14 +163,14 @@ if (isset($_GET['account_id'])) {
               </div>
               <!-- Role Field -->
               <div class="mb-4">
-                <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Vai trò</label>
                 <select
                   id="role"
                   name="role"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
+                  class="w-full px-4 py-2 border border-[#FFEAEA] rounded-lg focus:outline-none focus:ring focus:ring-[#FFEAEA]"
                   value="<?= $account['role'] ?>"
                 >
-                  <option value="">Select Role</option>
+                  <option value="">Chọn vai trò</option>
                   <option value="admin">Admin</option>
                   <option value="user">User</option>
                 </select>
@@ -179,9 +179,9 @@ if (isset($_GET['account_id'])) {
               <div class="mt-6">
                 <button
                   type="submit"
-                  class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-300"
+                  class="w-full bg-[#CE112D] text-white py-2 px-4 rounded-lg hover:bg-[#CE112D] focus:outline-none focus:ring focus:ring-bg-[#CE112D]"
                 >
-                  Submit
+                  Đăng ký
                 </button>
               </div>
             </form>
