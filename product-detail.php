@@ -39,16 +39,8 @@ if (!$product) {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Chi tiết sản phẩm</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Thêm link Google Fonts để tải font Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Áp dụng font Montserrat cho toàn bộ body */
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
 </head>
   <body>
        <!-- header -->

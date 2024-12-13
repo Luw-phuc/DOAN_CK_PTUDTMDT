@@ -6,10 +6,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Usbibracelet</title>
+    <title>Về chúng tôi</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -94,7 +93,7 @@ session_start();
 <body>
     <!-- header -->
     <div class="flex items-center justify-between px-20 py-4">
-      <h1 class="text-2xl font-bold text-red-500">Usbibracelet</h1>
+      <h1 class="text-2xl font-bold text-[#CE112D]">Usbibracelet</h1>
       <div class="relative flex w-3/5 items-center">
         <input
           class="w-full rounded-xl border bg-[#FFEAEA] p-2"
@@ -104,16 +103,16 @@ session_start();
           <img src="./assets/images/search.png" class="h-full w-auto" />
         </button>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1">
         <?php
           if (isset($_SESSION["user_name"])) {
-            echo "<a href='cart.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Cart</button></a>";
-            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Log Out</button></form>";
+            echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Giỏ hàng</button></a>";
+            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng xuất</button></form>";
           } else {
-            echo "<button id='btn_login' class='rounded-lg border bg-blue-400 px-6 py-2 font-bold'>Login</button>";
-            echo "<button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Register</button>";
+            echo "<button id='btn_login' class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng nhập</button>";
+            echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng ký</button>";
           }
-        ?>
+          ?> 
       </div>
     </div>
     <div class="bg-[#FFEAEA]">
@@ -122,9 +121,9 @@ session_start();
       >
         <li><a href="index.php">Trang chủ</a></li>
         <li><a href="product-list.php">Cửa hàng</a></li>
-        <li><a href="blog.html">Tin tức</a></li>
-        <li><a href="about.html">Về chúng tôi</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
+        <li><a href="blog.php">Tin tức</a></li>
+        <li><a href="about.php">Về chúng tôi</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
       </ul>
     </div>
     <!-- end header -->

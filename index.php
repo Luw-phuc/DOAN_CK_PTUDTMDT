@@ -14,14 +14,6 @@ session_start();
         https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         " rel="stylesheet"
     >
-    <!-- Thêm link Google Fonts để tải font Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Áp dụng font Montserrat cho toàn bộ body */
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-      </style>
   </head>
   <body>
     <!-- header -->
