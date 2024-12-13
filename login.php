@@ -16,8 +16,8 @@
       </div>
       <div class="flex w-4/5 flex-col items-center justify-center">
         <h1 class="mb-5 text-4xl font-bold text-red-600">ĐĂNG NHẬP</h1>
-        <form class="w-4/5" action="include/login.inc.php" method="post">
-          <div class="mb-4 grid grid-cols-5 items-center gap-3">
+        <form class="w-4/5" action="include/login.inc.php" method="post"> <!--action trong form này chỉ định rằng khi người dùng nhấn nút "Đăng nhập", form sẽ gửi dữ liệu đến file login.inc.php để xử lý        -->
+          <div class="mb-4 grid grid-cols-5 items-center gap-3"> <!--Form gửi dữ liệu qua phương thức POST -->
             <label htmlFor="email" class="text-xl"> Email: </label>
             <input
               id="email"
