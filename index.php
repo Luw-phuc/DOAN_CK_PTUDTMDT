@@ -17,8 +17,8 @@ session_start();
   </head>
   <body>
     <!-- header -->
-    <div class="flex items-center justify-between px-20 py-4">
-      <h1 class="text-2xl font-bold text-[#CE112D]">Usbibracelet</h1>
+    <div class="flex items-center justify-between px-20 py-7 bg-[#FDF8F8]">
+      <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
       <div class="relative flex w-3/5 items-center">
         <input
           class="w-full rounded-xl border bg-[#FFEAEA] p-2"
@@ -31,21 +31,30 @@ session_start();
       <div class="flex items-center gap-1">
         <?php
           if (isset($_SESSION["user_name"])) {
-            echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Giỏ hàng</button></a>";
-            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng xuất</button></form>";
+            echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Giỏ hàng</button></a>";
+            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng xuất</button></form>";
           } else {
-            echo "<button id='btn_login' class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng nhập</button>";
-            echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#FF7973] hover:animate-bounce duration-800'>Đăng ký</button>";
+            echo "<button id='btn_login' class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng nhập</button>";
+            echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng ký</button>";
           }
           ?> 
       </div>
     </div>
     <div class="bg-[#FFEAEA]">
       <ul
-        class="mt-2 flex items-center justify-around py-4 text-2xl font-bold text-[#CE112D]"
+        class="mt-2 flex items-center justify-around py-3 text-2xl font-bold text-[#CE112D] relative"
       >
         <li><a href="index.php">Trang chủ</a></li>
-        <li><a href="product-list.php">Cửa hàng</a></li>
+        <li class="group relative py-4"><a href="product-list.php" class="menu-hover">Cửa hàng</a>
+        <div class="text-lg border font-semibold w-60 px-3 invisible  translate-y-[16px] -translate-x-10 bg-[#FDF8F8] absolute z-50 flex flex-col py-0 min-w-48 text-black shadow-xl group-hover:visible ">
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm Cho Nam</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm Cho Nữ</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm chữ, số</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm lủng lẳng</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm đính đá</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm dài</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Sample mix sẵn</ul></div>
+          </div></li>
         <li><a href="blog.php">Tin tức</a></li>
         <li><a href="about.php">Về chúng tôi</a></li>
         <li><a href="contact.php">Liên hệ</a></li>
@@ -89,9 +98,9 @@ session_start();
     <div class="w-4/5 mx-auto">
       <div class="flex gap-5">
         <div class="h-10 w-5 bg-red-500"></div>
-        <h1 class="font-bold text-3xl">Danh mục sản phẩm</h1>
+        <h1 class="font-bold text-3xl">Phân loại</h1>
       </div>
-      <h1 class="mt-5 text-red-500 font-semibold text-3xl">DUYỆT THEO DANH MỤC</h1>
+      <h1 class="mt-5 text-[#CE112D] font-semibold text-3xl">DANH MỤC SẢN PHẨM</h1>
       <div class="mt-8 grid w-full grid-cols-7 gap-8">
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
@@ -148,14 +157,106 @@ session_start();
         </div>
       </div>
     </div>
-    
+<!--HDSD-->
+<div class="mx-auto my-10 w-3/5 border-2"></div>
+    <div class="w-4/5 mx-auto">
+      <div class="flex gap-5">
+        <div class="h-10 w-5 bg-red-500"></div>
+        <h1 class="font-bold text-3xl">Hướng dẫn</h1>
+      </div>
+
+      <div class="col-span-8">
+    <p class="text-2xl font-bold text-[#CE112D]">TẤT CẢ SẢN PHẨM</p>
+    <div class="mt-3 grid grid-cols-4 gap-x-6 gap-y-1">
+      <div id="product-detail" class="h-96 w-72 rounded-sm border bg-slate-200">
+            <div
+              class="h-3/4 w-full"
+            > <img src="./assets/images/Charmchonam/Charm logo Ferrari 59k.jpg" />
+          </div>
+            <div class="mt-3 px-3">
+              <a href="product-detail.php?productId=1" class="font-bold">Classic Bracelet</a>
+              <p class="mt-1">5.000.000 VND</p>
+              <div class="flex items-center gap-2">
+                <div class="mt-1 flex gap-2">
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.svg" />
+                </div>
+                <p class="translate-y-0.5">(30)</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-96 w-72 rounded-sm border bg-slate-200">
+            <div
+              class="h-3/4 w-full]"
+            ><img src="./assets/images/Charmchonu/Charm hoa Tulip hồng 55k.jpg"/></div>
+            <div class="mt-3 px-3">
+              <p class="font-bold">Classic Bracelet</p>
+              <p class="mt-1">5.000.000 VND</p>
+              <div class="flex items-center gap-2">
+                <div class="mt-1 flex gap-2">
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.svg" />
+                </div>
+                <p class="translate-y-0.5">(30)</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-96 w-72 rounded-sm border bg-slate-200">
+          <div
+              class="h-3/4 w-full]"
+            ><img src="./assets/images/Samplemixsan/Vòng tay Sample Family 499k.png"/></div>
+            <div class="mt-3 px-3">
+              <p class="font-bold">Classic Bracelet</p>
+              <p class="mt-1">5.000.000 VND</p>
+              <div class="flex items-center gap-2">
+                <div class="mt-1 flex gap-2">
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.svg" />
+                </div>
+                <p class="translate-y-0.5">(30)</p>
+              </div>
+            </div>
+          </div>
+          <div class="h-96 w-72 rounded-sm border bg-slate-200">
+          <div
+              class="h-3/4 w-full]"
+            ><img src="./assets/images/Charmdai/Charm I Love My Family 89k.png"/></div>
+            <div class="mt-3 px-3">
+              <p class="font-bold">Classic Bracelet</p>
+              <p class="mt-1">5.000.000 VND</p>
+              <div class="flex items-center gap-2">
+                <div class="mt-1 flex gap-2">
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star.svg" />
+                  <img src="./assets/images/star.svg" />
+                </div>
+                <p class="translate-y-0.5">(30)</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        
+          </div> 
+  <!--HDSD-->
     <div class="mx-auto my-10 w-3/5 border-2"></div>
     <div class="w-4/5 mx-auto">
       <div class="flex gap-5">
         <div class="h-10 w-5 bg-red-500"></div>
         <h1 class="font-bold text-3xl">Hướng dẫn</h1>
       </div>
-      <h1 class="mt-5 text-red-500 font-semibold text-3xl">CÁCH SỬ DỤNG</h1>
+      <h1 class="mt-5 text-[#CE112D] font-semibold text-3xl">CÁCH SỬ DỤNG</h1>
       <div class="mt-8 grid w-full grid-cols-3 gap-8">
   <div class="flex flex-col items-center">
     <div class="w-full aspect-w-1 aspect-h-1">
@@ -188,60 +289,80 @@ session_start();
     <p class="mt-2 text-lg text-center">Chèn và nối các Charms mới lại với nhau</p>
   </div>
 </div>
+<!--HDSD-->
+
     <div class="mx-auto my-10 w-3/5 border-2"></div>
 
-    <div class="mt-20 h-96 w-4/5 mx-auto grid grid-cols-2 gap-10">
+   <div class="mt-20 h-96 w-4/5 mx-auto grid grid-cols-2 gap-10 mt-5 ">
       <div class="h-full w-full bg-slate-500 border">
-        <img class="w-full h-full object-fill"/>
+        <img class="w-full h-full object-fill"
+        src="./assets/index/Banner index 2.png"/>
       </div>
       <div class="h-full w-full grid grid-rows-2 gap-8">
         <div class="h-full w-full grid grid-cols-2 gap-10">
-          <div class="h-full w-full bg-slate-500 border"></div>
-          <div class="h-full w-full bg-slate-500 border"></div>
+          <div class="h-full w-full bg-slate-500 border"><img class="w-full h-full object-fill"
+          src="./assets/index/1.png"/></div>
+          <div class="h-full w-full bg-slate-500 border"><img class="w-full h-full object-fill"
+          src="./assets/index/2.png"/></div>
         </div>
-        <div class="h-full w-full bg-slate-500 border"></div>
+        <div class="h-full w-full bg-slate-500 border"><img class="w-full h-full object-fill"
+        src="./assets/index/3.png"/></div>
       </div>
     </div>
-
     <div class="mx-auto my-10 w-3/5 border-2"></div>
-
-    <div class="w-full py-16 bg-slate-200 h-vh">
+    
+ <!--blogs-->
+    <div class="w-full py-16 bg-[#FDF8F8] h-vh">
       <div class="w-4/5 mx-auto grid gap-12 grid-cols-10">
-        <div class="col-span-4 h-80 bg-red-300 w-full"></div>
+        <div class="col-span-4 h-80 bg-red-300 w-full">
+        <img class="w-full h-full object-fill"
+        src="./assets/blogs/Blog3/0Blog3.png"
+        alt="Charm cho nữ"
+      />
+</div>
         <div class="col-span-6 flex flex-col justify-between">
           <div>
-            <p class="font-bold text-4xl">THE LOVE OF MINE</p>
-            <p class="text-xl mt-5 max-w-[650px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quo soluta facere illo rerum debitis sint ex recusandae, culpa quos? Atque, quos. Praesentium, asperiores corporis. Facilis non consequuntur excepturi eos!</p>  
+            <p class="font-bold text-4xl text-[#CE112D]">THE LOVE OF MINE</p>
+            <p class="text-xl mt-5 max-w-[650px] text-justify">Tặng đồ trang sức tôn vinh gia đình không chỉ là một món quà có giá trị mà còn là một hành động mang ý nghĩa sâu sắc, giàu cảm xúc và đong đầy những giá trị tinh thần: nó không dừng lại ở khía cạnh vật chất, mà còn vượt lên để trở thành biểu tượng hữu hình của tình yêu thương, sự gắn bó keo sơn và lòng biết ơn chân thành đối với những người thân yêu trong gia đình.</p>  
           </div>
           <div>
-            <button class="text-2xl font-bold text-white bg-red-500 px-5 py-3 rounded">READ NOW</button>
+            <button class="text-2xl font-bold text-white bg-[#CE112D] px-5 py-3 rounded animate-bounce hover:text-white">ĐỌC NGAY</button>
           </div>
         </div>
       </div>
       <div class="w-4/5 mx-auto mt-16">
-        <h1 class="font-bold text-5xl text-center">KHÁM PHÁ USBIBRACELET</h1>
+        <h1 class="font-bold text-5xl text-center text-[#CE112D]">KHÁM PHÁ USBIBRACELET</h1>
         <div class="mt-10 grid grid-cols-3 gap-10">
           <div>
             <div class="h-60 w-full rounded bg-slate-500">
-            </div>
+            <img class="w-full h-full object-fill"
+        src="./assets/blogs/Blog2/0Blog2.png"
+        alt="Charm cho nữ"
+      /></div>
             <div class="mt-6 text-center">
-              <h1 class="text-2xl font-bold">DISNEY X USBI</h1>
+              <h1 class="text-2xl font-bold">LOVE X USBI</h1>
               <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
           <div>
             <div class="h-60 w-full rounded bg-slate-500">
-            </div>
+            <img class="w-full h-full object-fill"
+        src="./assets/blogs/Blog7/0Blog7.png"
+        alt="Charm cho nữ"
+      /> </div>
             <div class="mt-6 text-center">
-              <h1 class="text-2xl font-bold">DISNEY X USBI</h1>
+              <h1 class="text-2xl font-bold">BRACESUCCEESS</h1>
               <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
           <div>
             <div class="h-60 w-full rounded bg-slate-500">
-            </div>
+            <img class="w-full h-full object-fill"
+        src="./assets/blogs/Blog6/0Blog6.png"
+        alt="Charm cho nữ"
+      /> </div>
             <div class="mt-6 text-center">
-              <h1 class="text-2xl font-bold">DISNEY X USBI</h1>
+              <h1 class="text-2xl font-bold">MY MUSE</h1>
               <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
@@ -264,8 +385,8 @@ session_start();
           <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
         </div>
         <div class="text-center mt-5">
-          <p class="font-bold text-2xl">Miễn phí vận chuyển</p>
-          <p class="mt-2">Miễn phí giao hàng trên toàn quốc với mọi giá trị đơn hàng</p>
+          <p class="font-bold text-2xl">Hỗ trợ 24/7</p>
+          <p class="mt-2">Đội ngũ chuyên nghiệp luôn hỗ trợ và tư vấn hoàn toàn miễn phí</p>
         </div>
       </div>
       <div class="flex flex-col items-center">
@@ -273,8 +394,8 @@ session_start();
           <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
         </div>
         <div class="text-center mt-5">
-          <p class="font-bold text-2xl">Miễn phí vận chuyển</p>
-          <p class="mt-2">Miễn phí giao hàng trên toàn quốc với mọi giá trị đơn hàng</p>
+          <p class="font-bold text-2xl">Bảo hành tuyệt đối</p>
+          <p class="mt-2">Bảo hành sản phẩm uy tín với thời gian tối đa lên đến 1 năm</p>
         </div>
       </div>
     </div>
