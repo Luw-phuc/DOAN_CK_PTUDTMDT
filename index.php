@@ -5,11 +5,15 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="
+        https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+        " rel="stylesheet"
+    >
     <!-- Thêm link Google Fonts để tải font Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -17,8 +21,8 @@ session_start();
         body {
             font-family: 'Montserrat', sans-serif;
         }
-    </style>
-</head>
+      </style>
+  </head>
   <body>
     <!-- header -->
     <div class="flex items-center justify-between px-20 py-4">
