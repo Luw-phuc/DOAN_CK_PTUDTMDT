@@ -28,9 +28,10 @@ session_start();
         }
 
         .section h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #ce112d;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .section p {
