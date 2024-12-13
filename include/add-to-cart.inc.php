@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $_SESSION['previous_page'] = $_SERVER['HTTP_REFERER'];
+    $_SESSION['previous_page'] = $_SERVER['HTTP_REFERER']; //Lưu lại trang hiện tại
     // Lấy productId và quantity từ request
     $productId = $_POST['productId'];
     $quantity = $_POST['quantity'];
@@ -29,8 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'quantity' => $quantity
         ];
     }
+    // Đánh dấu rằng sản phẩm đã được thêm vào giỏ hàng
     $_SESSION['cart_added'] = true;
 
+    // Chuyển hướng về trang trước đó
     header('Location: ' . $_SESSION['previous_page']);
     exit;
 } else {
