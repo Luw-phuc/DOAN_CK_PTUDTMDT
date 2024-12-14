@@ -224,7 +224,7 @@ if (isset($_SESSION['cart'])) {
                 type="button"
                 class="border border-red-500 text-red-500 px-6 py-2 w-32"
               >
-                Quay lại
+                     <a href="checkout-ship.php">Quay lại</a>
               </button>
               <button
                 type="submit"
