@@ -81,9 +81,9 @@ if (!$product) {
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
   <body>
-       <!-- header -->
-    <div class="flex items-center justify-between px-20 py-4">
-      <h1 class="text-2xl font-bold text-red-500">Usbibracelet</h1>
+        <!-- header -->
+    <div class="flex items-center justify-between px-20 py-7 bg-[#FDF8F8]">
+      <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
       <div class="relative flex w-3/5 items-center">
         <input
           class="w-full rounded-xl border bg-[#FFEAEA] p-2"
@@ -93,27 +93,36 @@ if (!$product) {
           <img src="./assets/images/search.png" class="h-full w-auto" />
         </button>
       </div>
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1">
         <?php
           if (isset($_SESSION["user_name"])) {
-            echo "<a href='cart.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Cart</button></a>";
-            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Log Out</button></form>";
+            echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Giỏ hàng</button></a>";
+            echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng xuất</button></form>";
           } else {
-            echo "<button id='btn_login' class='rounded-lg border bg-blue-400 px-6 py-2 font-bold'>Login</button>";
-            echo "<button class='rounded-lg border bg-green-400 px-6 py-2 font-bold'>Register</button>";
+            echo "<button id='btn_login' onclick=\"window.location.href='login.php'\" class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng nhập</button>";
+            echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng ký</button>";
           }
-        ?>
+          ?> 
       </div>
     </div>
     <div class="bg-[#FFEAEA]">
       <ul
-        class="mt-2 flex items-center justify-around py-4 text-2xl font-bold text-[#CE112D]"
+        class="mt-2 flex items-center justify-around py-3 text-2xl font-bold text-[#CE112D] relative"
       >
         <li><a href="index.php">Trang chủ</a></li>
-        <li><a href="product-list.php">Cửa hàng</a></li>
-        <li><a href="blog.html">Tin tức</a></li>
-        <li><a href="about.html">Về chúng tôi</a></li>
-        <li><a href="contact.html">Liên hệ</a></li>
+        <li class="group relative py-4"><a href="product-list.php" class="menu-hover">Cửa hàng</a>
+        <div class="text-lg border font-semibold w-60 px-3 invisible  translate-y-[16px] -translate-x-10 bg-[#FDF8F8] absolute z-50 flex flex-col py-0 min-w-48 text-black shadow-xl group-hover:visible ">
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a  href="product-list.php?categoryId=2">Charm Cho Nam</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=1">Charm Cho Nữ</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=4">Charm chữ, số</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=3">Charm lủng lẳng</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=7">Charm đính đá</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=6">Charm dài</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=5">Sample mix sẵn</a></ul></div>
+          </div></li>
+        <li><a href="blog.php">Tin tức</a></li>
+        <li><a href="about.php">Về chúng tôi</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
       </ul>
     </div>
     <!-- end header -->
@@ -121,7 +130,7 @@ if (!$product) {
     <div class="mt-8 grid grid-cols-4 gap-16 px-40">
       <div class="col-span-2 h-[480px] w-full">
         <div class="splide h-full w-full" role="group" aria-label="Splide">
-          <div class="splide__track h-full w-full">
+          <div class="splide__track h-100 w-120">
             <ul class="splide__list h-full w-full">
               <?php if (!empty($images)): ?>
                   <?php foreach ($images as $image): ?>
