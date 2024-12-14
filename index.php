@@ -106,56 +106,63 @@ session_start();
       <div class="mt-8 grid w-full grid-cols-7 gap-8">
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
+          <a  href="product-list.php?categoryId=1">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmchonu.png"
-            />
+            /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm cho nữ</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=1">Charm Cho Nữ</a></p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-            <img class="h-full w-full" src="./assets/Category/Charmchonam.png">
+          <a href="product-list.php?categoryId=2">
+            <img class="h-full w-full" src="./assets/Category/Charmchonam.png"></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm cho nam</p>
+          <p class="mt-2 text-lg text-center font-bold"><a  href="product-list.php?categoryId=2">Charm Cho Nam</a></p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
+          <a href="product-list.php?categoryId=4">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmchuso.png"
-            />
+            /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm chữ, số</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=4">Charm chữ, số</a></p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-            <img class="h-full w-full" src="./assets/Category/Charmlunglang.png" />
+          <a href="product-list.php?categoryId=3">
+            <img class="h-full w-full" src="./assets/Category/Charmlunglang.png" /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm lủng lẳng</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=3">Charm lủng lẳng</a></p>
         </div><div class="flex flex-col items-center">
           <div class="h-25 w-25">
+          <a href="product-list.php?categoryId=7">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmdinhda.png"
-            />
+            /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm đính đá</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=7">Charm đính đá</a></p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-            <img class="h-full w-full" src="./assets/Category/Charmdai.png" />
+          <a href="product-list.php?categoryId=6">
+            <img class="h-full w-full" src="./assets/Category/Charmdai.png" /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Charm dài</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=6">Charm dài</a></p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
+          <a href="product-list.php?categoryId=5">
             <img
               class="h-full w-full"
               src="./assets/Category/Samplemixsan.png"
-            />
+            /></a>
           </div>
-          <p class="mt-2 text-lg text-center font-bold">Sample mix sẵn</p>
+          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=5">Sample mix sẵn</a></p>
         </div>
       </div>
     </div>
