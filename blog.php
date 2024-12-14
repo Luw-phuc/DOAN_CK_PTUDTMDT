@@ -97,40 +97,40 @@
     <!-- end header -->
 
     <div class="">
-      <div class="bg-[#D9D9D9] grid h-[520px] grid-cols-7">
+      <div class="bg-[#FDF8F8] grid h-[440px] grid-cols-7">
         <div class="col-span-3 flex items-center mx-auto">
-          <div class="h-[440px] w-[480px]">
-            <img class="h-full w-full object-fill" src="./assets/blogs/1.png" />
+          <div class="h-[440px] w-[680px]">
+            <img class="h-full w-full object-fill" src="./assets/blogs/biablog.png" />
           </div>
         </div>
         <div class="col-span-4 flex flex-col items-center justify-center">
-          <p class="text-3xl">Tỏa sáng cùng Usbibracelet</p>
+          <p class="text-3xl">𝑼𝒔𝒃𝒊𝒃𝒓𝒂𝒄𝒆𝒍𝒆𝒕 𝑰𝒅𝒆𝒂𝒔</p>
           <div class="mt-5 text-center">
-            <p class="text-6xl mt-1 font-bold text-red-500">
+            <p class="text-6xl mt-3 mb-5 font-bold text-[#CE112D]">
               "THE LOVE OF MINE"
             </p>
-            <p class="text-5xl mt-1 font-bold text-red-500">
-              QÙA TẶNG Ý NGHĨA CHO
+            <p class="text-5xl mt-3 font-bold text-[#CE112D]">
+              QUÀ TẶNG Ý NGHĨA CHO
             </p>
-            <p class="text-5xl mt-1 font-bold text-red-500">
+            <p class="text-5xl mt-1 font-bold text-[#CE112D]">
               NGÀY QUỐC TẾ NAM GIỚI
             </p>
           </div>
-          <div class="mt-5 w-[90%]">
+          <div class="mt-8 w-[90%]">
             <p class="text-lg">
               Vào ngày 19 tháng 11, Ngày Quốc tế Nam giới được tôn vinh trên
               toàn cầu: khám phá những món trang sức ý nghĩa dành cho anh ấy để
               làm quà tặng trong ngày đặc biệt này.
             </p>
           </div>
-          <p class="text-6xl text-red-500">→</p>
+          <p class="text-6xl text-[#CE112D] animate-bounce">→</p>
         </div>
       </div>
       <div>
-        <div class="mt-10 grid grid-cols-4 gap-10 px-20">
 
+        <div class="mt-10 grid grid-cols-4 gap-10 px-20">
           <?php foreach ($blogs as $blog): ?>
-            <div class="h-80 border rounded-lg gap-5">
+            <div class="h-96 border rounded-lg gap-5 hover:scale-125 transition-transform duration-500">
               <div class="h-3/4">
                 <?php if (!empty($blog['image_path'])): ?>
                   <img src="<?= $blog['image_path']; ?>" alt="Blog Image" class="h-full w-full object-cover" />
@@ -141,27 +141,28 @@
                 <?php endif; ?>
               </div>
               <div class="mt-2 px-3 items-center justify-center">
-                <p>Tỏa sáng cùng Usbibracelet</p>
-                <a href="blogdetail.php?blogId=<?= $blog['id'] ?>" class="text-red-500 font-bold text-lg">
+            
+                <a href="blogdetail.php?blogId=<?= $blog['id'] ?>" class="text-[#CE112D] font-bold text-lg center">
                   <?= htmlspecialchars($blog['title']); ?>
                 </a>
               </div>
             </div>
           <?php endforeach; ?>
         </div>
+     
 
         <!-- Pagination -->
-        <div class="pagination mx-auto w-96 flex items-center justify-between gap-3">
+        <div class="pagination mx-auto w-96 flex items-center justify-between gap-3 mt-5">
             <div class="flex gap-3">
-              <a href="?page=1" class="px-2 py-1 rounded bg-slate-200 pagination-btn <?= ($page == 1) ? 'disabled' : ''; ?>">First</a>
-              <a href="?page=<?= max(1, $page - 1); ?>" class="px-2 py-1 rounded bg-slate-200 pagination-btn <?= ($page == 1) ? 'disabled' : ''; ?>">Previous</a>
+              <a href="?page=1" class=" text-white px-2 py-1 rounded bg-[#CE112D] pagination-btn <?= ($page == 1) ? 'disabled' : ''; ?>">First</a>
+              <a href="?page=<?= max(1, $page - 1); ?>" class="text-white px-2 py-1 rounded bg-[#CE112D] pagination-btn <?= ($page == 1) ? 'disabled' : ''; ?>">Previous</a>
             </div>
             <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                 <a href="?page=<?= $i; ?>" class="pagination-btn <?= ($i == $page) ? 'active' : ''; ?>"><?= $i; ?></a>
             <?php endfor; ?>
             <div class="flex gap-3">
-              <a href="?page=<?= min($totalPages, $page + 1); ?>" class="px-2 py-1 rounded bg-slate-200 pagination-btn <?= ($page == $totalPages) ? 'disabled' : ''; ?>">Next</a>
-              <a href="?page=<?= $totalPages; ?>" class="px-2 py-1 rounded bg-slate-200 pagination-btn <?= ($page == $totalPages) ? 'disabled' : ''; ?>">Last</a>
+              <a href="?page=<?= min($totalPages, $page + 1); ?>" class=" text-white px-2 py-1 rounded bg-[#CE112D] pagination-btn <?= ($page == $totalPages) ? 'disabled' : ''; ?>">Next</a>
+              <a href="?page=<?= $totalPages; ?>" class="text-white px-2 py-1 rounded bg-[#CE112D] pagination-btn <?= ($page == $totalPages) ? 'disabled' : ''; ?>">Last</a>
             </div>
         </div>
       </div>

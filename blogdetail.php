@@ -90,16 +90,17 @@
     </div>
     <!-- end header -->
 
-    <!-- Render Blog Detail -->
-    <div class="px-20 py-10">
-      <h2 class="text-3xl font-bold text-[#CE112D]"><?= $blog['title']; ?></h2>
-      <div class="mt-2 text-sm italic text-gray-500">
-        <strong>Ngày đăng: </strong><?= $formattedDate; ?>
-      </div>
-      <div class="mt-6">
-        <?= $blog['content']; ?>
-      </div>
-    </div>
+  <!-- Render Blog Detail -->
+<div class="px-10 py-10 rounded-lg shadow-md max-w-5xl mx-auto">
+  <h2 class="text-4xl font-bold text-[#CE112D]"><?= $blog['title']; ?></h2>
+  <div class="mt-2 text-sm italic text-gray-500">
+    <strong>Ngày đăng: </strong><?= $formattedDate; ?>
+  </div>
+  <div class="mt-6 text-gray-800 leading-relaxed text-lg">
+    <?= $blog['content']; ?>
+  </div>
+</div>
+
 
     <!-- footer -->
 <div
