@@ -384,7 +384,7 @@ session_start();
       </div>
       <div class="flex flex-col items-center">
         <div class="h-24 w-1/2">
-          <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
+          <img class="h-full w-full" src="https://cuoihoihungthinh.com/wp-content/uploads/2021/09/support-icon.png"/>
         </div>
         <div class="text-center mt-5">
           <p class="font-bold text-2xl">Hỗ trợ 24/7</p>
@@ -393,7 +393,7 @@ session_start();
       </div>
       <div class="flex flex-col items-center">
         <div class="h-24 w-1/2">
-          <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
+          <img class="h-full w-full" src="https://static.vecteezy.com/system/resources/previews/003/781/164/non_2x/1-year-warranty-icon-isolated-on-white-background-vector.jpg"/>
         </div>
         <div class="text-center mt-5">
           <p class="font-bold text-2xl">Bảo hành tuyệt đối</p>

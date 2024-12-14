@@ -82,9 +82,33 @@ if ($blogId) {
           </a>
         </nav>
       </div>
+      <!-- Main content -->
+      <div class="flex-1 flex flex-col">
+        <!-- Header -->
+        <header
+          class="flex items-center justify-between bg-white py-4 px-6 border-b-2 border-gray-200"
+        >
+          <div class="flex items-center">
+            <input
+              class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none"
+              placeholder="Tìm kiếm"
+              type="text"
+            />
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-bell"> </i>
+            <img
+              alt="User Avatar"
+              class="h-8 w-8 rounded-full"
+              height="30"
+              src="./assets/user/avatar.jpg"
+              width="30"
+            />
+          </div>
+        </header>
 
       <!-- Main content -->
-      <div class="bg-white mx-auto mt-5 rounded-lg shadow-md p-6">
+      <div class=" flex-1 bg-white p-6 <main class=">
         <?php if (isset($blogId)): ?>
           <input id="blogId" type="hidden" value="<?= $blogId ?>"/>
         <?php endif; ?>
@@ -111,7 +135,7 @@ if ($blogId) {
           id="btnSave"
           class="px-6 py-2 translate-y-14 bg-[#CE112D] text-white rounded "
         >
-          <?= isset($blogId) ? 'Update Blog' : 'Thêm mới tin tức' ?> <!-- Thay đổi tên nút tùy vào trạng thái -->
+          <?= isset($blogId) ? 'Cập nhật tin tức' : 'Thêm mới tin tức' ?> <!-- Thay đổi tên nút tùy vào trạng thái -->
         </button>
       </div>
     </div>
