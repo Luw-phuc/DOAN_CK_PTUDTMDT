@@ -35,9 +35,9 @@ if (isset($_SESSION['message'])) {
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
-            class="h-8 w-8"
+            class="h-8 w-12"
             height="20"
-            src="./assets/user/logo.png"
+            src="./assets/user/logo1.png"
             width="40"
           />
           <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
