@@ -201,15 +201,10 @@ if (!$product) {
               <p id="size-guide-icon-trigger">+</p>
             </div>
             <p id="size-guide" class="hidden text-sm font-normal italic">
-              Accessorizing can be a challenging sport, but the Tennis Bracelet
-              in silver is always at the top of its game. Comfortable and chic,
-              this radiant piece gets you through the day, from morning to late
-              cocktail hours. To achieve greater durability, each shimmering
-              crystal is individually set and tightly secured. The chain itself
-              is crafted from high-quality 316L stainless steel and features
-              sizing rings to always fit you perfectly. The Tennis Bracelet is
-              also a great team player, so pair it with your favorite Daniel
-              Wellington watch or bracelets.
+            Số lượng charm trên một vòng sẽ được điều chỉnh phù hợp với kích cỡ cổ tay của bạn.
+            Hãy đo chu vi cổ tay và cộng thêm 2 charm để tính số lượng charm cần thiết.
+            Ví dụ: Nếu cổ tay bạn là 15 cm, số charm cần đeo sẽ là 17.
+
             </p>
           </div>
           <div
@@ -221,15 +216,22 @@ if (!$product) {
               <p id="shipping-return-icon-trigger">+</p>
             </div>
             <p id="shipping-return" class="hidden text-sm font-normal italic">
-              Accessorizing can be a challenging sport, but the Tennis Bracelet
-              in silver is always at the top of its game. Comfortable and chic,
-              this radiant piece gets you through the day, from morning to late
-              cocktail hours. To achieve greater durability, each shimmering
-              crystal is individually set and tightly secured. The chain itself
-              is crafted from high-quality 316L stainless steel and features
-              sizing rings to always fit you perfectly. The Tennis Bracelet is
-              also a great team player, so pair it with your favorite Daniel
-              Wellington watch or bracelets.
+            Shipping 
+            Chính Sách Miễn Phí Vận Chuyển
+            Usbibracelet rất vui thông báo rằng chính sách miễn phí vận chuyển đã được áp dụng cho tất cả các đơn hàng trên Website của chúng tôi. Hy vọng rằng việc cung cấp dịch vụ miễn phí vận chuyển là một phần quan trọng của cam kết mang lại trải nghiệm mua sắm tốt nhất cho khách hàng.
+            Ưu đãi miễn phí vận chuyển:
+            Miễn phí vận chuyển cho tất cả các đơn hàng.
+            Áp dụng cho tất cả các sản phẩm trên Website và Fanpage
+            Miễn phí vận chuyển được áp dụng cho tất cả đơn hàng trên toàn quốc.
+            Chúng tôi cam kết đảm bảo rằng tất cả các đơn hàng sẽ được xử lý và vận chuyển một cách nhanh chóng và chuyên nghiệp. Với chính sách Miễn phí vận chuyển của chúng tôi, bạn có thể yên tâm mua sắm mà không cần lo lắng về phí vận chuyển.
+            Hãy khám phá bộ sưu tập sản phẩm của chúng tôi ngay hôm nay và tận hưởng trải nghiệm mua sắm thuận tiện và tiết kiệm cùng với dịch vụ Miễn phí vận chuyển
+            Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email hoặc số điện thoại được cung cấp trên trang web. Đội ngũ hỗ trợ của chúng tôi luôn sẵn lòng để giúp đỡ bạn.
+            Xin chân thành cảm ơn bạn đã lựa chọn mua sắm tại chúng tôi!
+
+            Return 
+            Nếu bạn phát hiện bất kỳ lỗi nào khi nhận được charm, hãy liên hệ ngay với chúng tớ qua Fanpage, Instagram: usbibracelet, hoặc hotline 07979.
+            Chúng tớ cam kết hỗ trợ đổi trả 1-1 nhanh chóng để bạn yên tâm sử dụng!
+
             </p>
           </div>
         </div>
