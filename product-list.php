@@ -60,7 +60,7 @@ try {
   $stmt->execute();
   $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
   // Lấy tên danh mục nếu có categoryId
-  $categoryName = "Tất Cả Sản Phẩm";
+  $categoryName = "TẤT CẢ SẢN PHẨM";
   if ($categoryId !== null) {
       $stmtCategory = $pdo->prepare("SELECT name FROM category WHERE id = :categoryId");
       $stmtCategory->bindParam(':categoryId', $categoryId, PDO::PARAM_INT);
@@ -138,7 +138,7 @@ try {
     <!-- category -->
     
     <div class="mt-7 flex w-full flex-col items-center">
-      <h1 class="text-3xl font-bold text-[#CE112D]">CATEGORY</h1>
+      <h1 class="text-3xl font-bold text-[#CE112D]">DANH MỤC SẢN PHẨM</h1>
       <div class="mt-5 grid w-4/5 grid-cols-7 gap-8">
       <div class="flex flex-col items-center">
         <div class="h-25 w-25">
@@ -250,6 +250,42 @@ try {
     </div>
 
     <!-- end product grid -->
+    <!--HDSD-->
+    <div class="mt-7 flex w-full flex-col items-center">
+    <h1 class="text-3xl font-bold text-[#CE112D]">HƯỚNG DẪN SỬ DỤNG</h1>
+      <div class="mt-8 grid w-full grid-cols-3 gap-8">
+  <div class="flex flex-col items-center">
+    <div class="w-full aspect-w-1 aspect-h-1">
+      <img
+        class="object-contain"
+        src="./assets/index/Bước 1.png"
+        alt="Charm cho nữ"
+      />
+    </div>
+    <p class="mt-2 text-lg text-center">Mở rộng mối nối của vòng đeo tay</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-full aspect-w-1 aspect-h-1">
+      <img
+        class="object-contain"
+        src="./assets/index/Bước 2.png"
+        alt="Charm cho nam"
+      />
+    </div>
+    <p class="mt-2 text-lg text-center">Nắm bắt hai đầu của charm muốn tách và tháo ra</p>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="w-full aspect-w-1 aspect-h-1">
+      <img
+        class="object-contain"
+        src="./assets/index/Bước 3.png"
+        alt="Charm chữ, số"
+      />
+    </div>
+    <p class="mt-2 text-lg text-center">Chèn và nối các Charms mới lại với nhau</p>
+  </div>
+</div>
+<!--HDSD--> 
 
     <<!-- footer -->
 <div
