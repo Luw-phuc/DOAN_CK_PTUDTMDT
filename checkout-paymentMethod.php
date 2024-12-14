@@ -192,7 +192,7 @@ if (isset($_SESSION['cart'])) {
           </div>
           <form action="include/checkout-paymentMethod.inc.php" method="post">
             <div class="border rounded mb-5 px-4 py-2 shadow-lg">
-              <h1 class="font-bold text-lg">Phương thức vận chuyển</h1>
+              <h1 class="font-bold text-lg">Phương thức thanh toán</h1>
               <div class="mt-3">
                 <div class="flex items-center justify-between">
                   <div class="flex gap-5">
