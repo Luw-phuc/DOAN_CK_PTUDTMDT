@@ -161,12 +161,12 @@ if (isset($_SESSION['cart'])) {
             </label>
             <div class="flex mt-1">
               <input
-                class="flex-1 border rounded-l-lg p-2"
+                class="w-9/12 border rounded-l-lg p-2"
                 id="discount-code"
                 type="text"
               />
-              <button class="bg-red-600 text-white w-72 rounded-r-lg">
-                <p>Áp dụng</p>
+              <button class="bg-red-600 text-white px-4 py-2 rounded-r-lg whitespace-nowrap">
+                Áp dụng
               </button>
             </div>
           </div>
