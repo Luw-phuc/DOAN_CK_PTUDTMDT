@@ -112,7 +112,7 @@ if (isset($_GET['account_id'])) {
                 <div class="mb-4 w-full">
                   <label for="id" class="block text-sm font-medium text-gray-700 mb-1">ID</label>
                   <input
-                    type="text"
+                    type="hidden"
                     id="id"
                     name="id"
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"

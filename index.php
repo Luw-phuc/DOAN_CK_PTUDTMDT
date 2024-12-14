@@ -18,7 +18,9 @@ session_start();
   <body>
     <!-- header -->
     <div class="flex items-center justify-between px-20 py-7 bg-[#FDF8F8]">
-      <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
+    <a href="index.php">
+  <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
+     </a>
       <div class="relative flex w-3/5 items-center">
         <input
           class="w-full rounded-xl border bg-[#FFEAEA] p-2"
@@ -399,48 +401,73 @@ session_start();
         </div>
       </div>
     </div>
+  </div>
 
     <!-- footer -->
-    <div
-      class="mt-20 min-h-40 grid-cols-4 bg-[#FDF8F8] px-16 pt-6 text-[#CE112D]"
-    >
-      <div class="mb-3">
-        <input
-          class="py-2 px-5 border rounded"
-          placeholder="Nhập email của bạn ..."
-        />
-        <button class="bg-[#FFEAEA] w-32 font-bold h-10 rounded">
-          Đăng ký
-        </button>
-      </div>
-      <div class="grid grid-cols-4 gap-10">
-        <div>
-          <h1 class="text-3xl font-bold">Usbibracelet</h1>
-          <h3 class="mt-2 text-lg">Đăng ký</h3>
-          <h1 class="mt-2 text-xl font-semibold italic">
-            Nhận ngay mã giảm giá 12%
-          </h1>
-        </div>
-        <div>
-          <h1 class="text-lg">Hỗ trợ</h1>
-          <h3 class="mt-2 text-sm">Đường CMT8, Quận 10, TP HCM</h3>
-          <h3 class="mt-2 text-sm">Usbi@gmail.com</h3>
-          <h3 class="mt-2 text-sm">08358588484</h3>
-        </div>
-        <div>
-          <h1 class="text-lg">Menu</h1>
-          <a href="index.php" class="mt-2 block text-sm">Trang chủ</a>
-          <a href="blog.php" class="mt-2 block text-sm">Bài viết</a>
-          <a href="product-list.php" class="mt-2 block text-sm">Cửa hàng</a>
-          <a href="about.php" class="mt-2 block text-sm">Về chúng tôi</a>
-          <a href="contact.php" class="mt-2 block text-sm">Liên hệ</a>
-        </div>
-        <div>
-          <h1 class="text-lg">Theo dõi Usbi tại</h1>
-        </div>
+<div
+  class="mt-20 min-h-40 grid-cols-4 bg-[#FDF8F8] px-16 pt-6 text-[#CE112D]"
+>
+  <div class="mb-3">
+    <input
+      class="py-2 px-5 border rounded"
+      placeholder="Nhập email của bạn ..."
+    />
+    <button class="bg-[#FFEAEA] w-32 font-bold h-10 rounded">
+      Đăng ký
+    </button>
+  </div>
+  <div class="grid grid-cols-4 gap-10">
+    <div>
+      <h1 class="text-3xl font-bold">Usbibracelet</h1>
+      <h3 class="mt-2 text-lg">Đăng ký</h3>
+      <h1 class="mt-2 text-xl font-semibold italic">
+        Nhận ngay mã giảm giá 12%
+      </h1>
+    </div>
+    <div>
+      <h1 class="text-lg font-bold">Hỗ trợ</h1>
+      <h3 class="mt-2 text-sm">Đường CMT8, Quận 10, TP HCM</h3>
+      <h3 class="mt-2 text-sm">Usbi@gmail.com</h3>
+      <h3 class="mt-2 text-sm">08358588484</h3>
+    </div>
+    <div>
+      <h1 class="text-lg font-bold">Menu</h1>
+      <a href="index.php" class="mt-2 block text-sm">Trang chủ</a>
+      <a href="product-list.php" class="mt-2 block text-sm">Cửa hàng</a>
+      <a href="blog.php" class="mt-2 block text-sm">Tin tức</a>
+      <a href="about.php" class="mt-2 block text-sm">Về chúng tôi</a>
+      <a href="contact.php" class="mt-2 block text-sm mb-6">Liên hệ</a>
+    </div>
+    <div>
+      <h1 class="text-lg font-bold">Theo dõi Usbi tại</h1>
+      <div class="flex gap-4 mt-4">
+        <a href="https://www.facebook.com/profile.php?id=61566981405194" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+            alt="Facebook"
+            class="w-6 h-6"
+          />
+        </a>
+        <a href="https://www.instagram.com/usbibracelet/" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            alt="Instagram"
+            class="w-6 h-6"
+          />
+        </a>
+        <a href="https://www.tiktok.com/@usbibracelet20s" target="_blank">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"
+            alt="TikTok"
+            class="w-6 h-6"
+          />
+        </a>
       </div>
     </div>
-    <!-- end footer -->
+  </div>
+</div>
+<!-- end footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         var splide = new Splide( '.splide' );
