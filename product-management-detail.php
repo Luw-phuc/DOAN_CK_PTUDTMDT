@@ -33,12 +33,12 @@ if (isset($_GET['productId'])) {
     $stmt->bindParam(":id", $product_id);
     $stmt->execute();
     $product = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    // Lấy các hình ảnh của sản phẩm
     $stmtImages = $pdo->prepare("SELECT path FROM image WHERE product_id = :productId");
     $stmtImages->bindParam(':productId', $product_id, PDO::PARAM_INT);
     $stmtImages->execute();
     $images = $stmtImages->fetch(PDO::FETCH_ASSOC);
-
+    // Lấy giá sản phẩm
     $stmtPrice = $pdo->prepare('SELECT * FROM productprice WHERE product_id = :productId');
     $stmtPrice->bindParam(':productId', $product_id, PDO::PARAM_INT);
     $stmtPrice->execute();
