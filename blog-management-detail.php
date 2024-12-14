@@ -68,7 +68,7 @@ if ($blogId) {
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="order-management.php"
           >
             <i class="fas fa-table"> </i>
             ĐƠN HÀNG
