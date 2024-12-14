@@ -13,7 +13,7 @@ if ($productId) {
       $stmt->bindParam(':id', $productId, PDO::PARAM_INT);
       $stmt->execute();
       $product = $stmt->fetch(PDO::FETCH_ASSOC);
-
+      // Lấy hình ảnh sản phẩm
       $stmtImages = $pdo->prepare("SELECT path FROM image WHERE product_id = :productId");
       $stmtImages->bindParam(':productId', $productId, PDO::PARAM_INT);
       $stmtImages->execute();
@@ -149,7 +149,7 @@ if (!$product) {
             <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star-yellow.svg" />
-            <img src="./assets/images/star.svg" />
+            <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star.svg" />
           </div>
           <p class="translate-y-0.5">(30)</p>
@@ -266,7 +266,7 @@ if (!$product) {
                         <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star-yellow.svg" />
-                        <img src="./assets/images/star.svg" />
+                        <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star.svg" />
                       </div>
                       <p class="translate-y-0.5">(30)</p>

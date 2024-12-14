@@ -295,10 +295,10 @@ $totalPages = ceil($totalProducts / $productsPerPage);
                       <p class="mt-1"><?php echo number_format($product['product_price'], 0, ',', '.') . 'đ'; ?></p>
                       <div class="flex items-center gap-2">
                           <div class="mt-1 flex gap-2">
-                              <img src="./assets/images/star.png" />
-                              <img src="./assets/images/star.png" />
-                              <img src="./assets/images/star.png" />
-                              <img src="./assets/images/star.svg" />
+                              <img src="./assets/images/star-yellow.svg" />
+                              <img src="./assets/images/star-yellow.svg" />
+                              <img src="./assets/images/star-yellow.svg" />
+                              <img src="./assets/images/star-yellow.svg" />
                               <img src="./assets/images/star.svg" />
                           </div>
                           <p class="translate-y-0.5">(30)</p>
