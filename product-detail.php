@@ -83,7 +83,9 @@ if (!$product) {
   <body>
         <!-- header -->
     <div class="flex items-center justify-between px-20 py-7 bg-[#FDF8F8]">
-      <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
+    <a href="index.php">
+  <h1 class="text-3xl font-bold text-[#CE112D]">𝐔𝐒𝐁𝐈𝐁𝐑𝐀𝐂𝐄𝐋𝐄𝐓</h1>
+     </a>
       <div class="relative flex w-3/5 items-center">
         <input
           class="w-full rounded-xl border bg-[#FFEAEA] p-2"
