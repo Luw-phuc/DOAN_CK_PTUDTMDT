@@ -62,7 +62,7 @@ session_start();
         <button
           class="w-60 py-1 text-red-500 font-bold border border-red-500 rounded-lg"
         >
-          Tiếp tục mua sắm
+        <a href="product-list.php">Tiếp tục mua sắm</a>
         </button>
         <button
           class="w-60 py-1 text-red-500 font-bold border border-red-500 rounded-lg"
