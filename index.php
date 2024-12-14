@@ -34,7 +34,7 @@ session_start();
             echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Giỏ hàng</button></a>";
             echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng xuất</button></form>";
           } else {
-            echo "<button id='btn_login' class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng nhập</button>";
+            echo "<button id='btn_login' onclick=\"window.location.href='login.php'\" class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng nhập</button>";
             echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng ký</button>";
           }
           ?> 
@@ -47,13 +47,13 @@ session_start();
         <li><a href="index.php">Trang chủ</a></li>
         <li class="group relative py-4"><a href="product-list.php" class="menu-hover">Cửa hàng</a>
         <div class="text-lg border font-semibold w-60 px-3 invisible  translate-y-[16px] -translate-x-10 bg-[#FDF8F8] absolute z-50 flex flex-col py-0 min-w-48 text-black shadow-xl group-hover:visible ">
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a  href="/product-list.php?categoryId=2">Charm Cho Nam</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=1">Charm Cho Nữ</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=4">Charm chữ, số</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=3">Charm lủng lẳng</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=7">Charm đính đá</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=6">Charm dài</a></ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=5">Sample mix sẵn</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a  href="product-list.php?categoryId=2">Charm Cho Nam</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=1">Charm Cho Nữ</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=4">Charm chữ, số</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=3">Charm lủng lẳng</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=7">Charm đính đá</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=6">Charm dài</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="product-list.php?categoryId=5">Sample mix sẵn</a></ul></div>
           </div></li>
         <li><a href="blog.php">Tin tức</a></li>
         <li><a href="about.php">Về chúng tôi</a></li>
@@ -429,11 +429,11 @@ session_start();
         </div>
         <div>
           <h1 class="text-lg">Menu</h1>
-          <a href="/index.html" class="mt-2 block text-sm">Trang chủ</a>
-          <a href="/blog.html" class="mt-2 block text-sm">Bài viết</a>
-          <a class="mt-2 block text-sm">Cửa hàng</a>
-          <a class="mt-2 block text-sm">Câu chuyện Usbi</a>
-          <a class="mt-2 block text-sm">Giỏ hàng</a>
+          <a href="index.php" class="mt-2 block text-sm">Trang chủ</a>
+          <a href="blog.php" class="mt-2 block text-sm">Bài viết</a>
+          <a href="product-list.php" class="mt-2 block text-sm">Cửa hàng</a>
+          <a href="about.php" class="mt-2 block text-sm">Về chúng tôi</a>
+          <a href="contact.php" class="mt-2 block text-sm">Liên hệ</a>
         </div>
         <div>
           <h1 class="text-lg">Theo dõi Usbi tại</h1>
