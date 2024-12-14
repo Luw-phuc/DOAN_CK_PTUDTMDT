@@ -13,7 +13,7 @@ if ($productId) {
       $stmt->bindParam(':id', $productId, PDO::PARAM_INT);
       $stmt->execute();
       $product = $stmt->fetch(PDO::FETCH_ASSOC);
-
+      // Lấy hình ảnh sản phẩm
       $stmtImages = $pdo->prepare("SELECT path FROM image WHERE product_id = :productId");
       $stmtImages->bindParam(':productId', $productId, PDO::PARAM_INT);
       $stmtImages->execute();
