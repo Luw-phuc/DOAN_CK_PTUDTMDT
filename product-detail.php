@@ -149,7 +149,7 @@ if (!$product) {
             <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star-yellow.svg" />
-            <img src="./assets/images/star.svg" />
+            <img src="./assets/images/star-yellow.svg" />
             <img src="./assets/images/star.svg" />
           </div>
           <p class="translate-y-0.5">(30)</p>
@@ -266,7 +266,7 @@ if (!$product) {
                         <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star-yellow.svg" />
-                        <img src="./assets/images/star.svg" />
+                        <img src="./assets/images/star-yellow.svg" />
                         <img src="./assets/images/star.svg" />
                       </div>
                       <p class="translate-y-0.5">(30)</p>
