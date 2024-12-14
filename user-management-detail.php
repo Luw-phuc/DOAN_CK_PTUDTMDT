@@ -109,18 +109,17 @@ if (isset($_GET['account_id'])) {
             <form class="" action="include/user-management-detail.inc.php" method="POST">
               <!-- ID Field -->
               <div class="grid grid-cols-2 items-center gap-10">
-                <div class="mb-4 w-full">
-                  <label for="id" class="block text-sm font-medium text-gray-700 mb-1">ID</label>
-                  <input
-                    type="hidden"
-                    id="id"
-                    name="id"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
-                    placeholder="Nhập ID"
-                    value="<?= $account['id'] ?>"
+              <input
+                      type="hidden"
+                      id="id"
+                      name="id"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
+                      placeholder="Enter ID"
+                      value="<?= $account['id'] ?>"
                   />
-                </div><!-- Email Field -->
-                <div class="mb-4">
+                  <div class="grid grid-cols-2 items-center gap-10">
+              <!-- Email Field -->
+                  <div class="mb-4">
                   <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                   <input
                     type="email"
