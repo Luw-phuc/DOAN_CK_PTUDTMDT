@@ -64,14 +64,14 @@ if (isset($_GET['account_id'])) {
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="order-management.php"
           >
             <i class="fas fa-table"> </i>
             ĐƠN HÀNG
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="blog-management.php"
           >
             <i class="fas fa-edit"> </i>
             TIN TỨC
@@ -125,7 +125,7 @@ if (isset($_GET['account_id'])) {
                     type="email"
                     id="email"
                     name="email"
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
+                    class="w-80 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-indigo-200"
                     placeholder="Nhập Email"
                     value="<?= $account['email'] ?>"
                     required

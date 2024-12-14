@@ -59,7 +59,7 @@ if (isset($_SESSION['message'])) {
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="order-management.php"
           >
             <i class="fas fa-table"> </i>
             ĐƠN HÀNG
@@ -170,7 +170,7 @@ if (isset($_SESSION['message'])) {
                       <a href="user-management-detail.php?account_id=<?= $account['id'] ?>">
                           <button   
                             class="rounded-md bg-[#FFEAEA] py-2 px-4 border border-transparent text-center text-sm text-black transition-all shadow-md hover:shadow-lg focus:bg-[#FFEAEA] focus:shadow-none active:bg-[#FFEAEA] hover:bg-[#FFEAEA] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
-                            Edit
+                            Chỉnh sửa
                           </button>
                       </a>
                       </td>

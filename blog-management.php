@@ -55,7 +55,7 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="order-management.php"
           >
             <i class="fas fa-table"> </i>
             ĐƠN HÀNG
@@ -117,7 +117,7 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       <h2 class="text-xl font-semibold"><?= htmlspecialchars($blog['title']) ?></h2>
                       <span class="text-sm text-gray-500"><?= date("F j, Y", strtotime($blog['timestamp'])) ?></span>
                     </div>
-                    <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-blue-500">Edit</a>
+                    <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-[#CE112D]">Chỉnh sửa</a>
                   </div>
                 <?php endforeach; ?>
               <?php else: ?>

@@ -59,44 +59,89 @@ $totalPages = ceil($totalOrders / $perPage);
   <body class="bg-gray-100">
     <div class="flex h-screen">
       <!-- Sidebar -->
-      <div class="bg-gray-900 h-vh text-white w-64 space-y-6 py-7 px-2">
+      <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
-            class="h-8 w-8"
-            src="https://storage.googleapis.com/a1aa/image/FEJbZin0JpKKJNiVCRapiITHPGQisQ0ejxFpXqiVNl0eOZ5TA.jpg"
+            class="h-8 w-12"
+            height="20"
+            src="./assets/user/logo1.png"
+            width="40"
           />
-          <span class="text-2xl font-extrabold"> Usbibracelet </span>
+          <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
         </div>
         <nav class="space-y-2">
-          <a class="block py-2.5 px-4 hover:bg-gray-700" href="user-management.php">USER</a>
-          <a class="block py-2.5 px-4 hover:bg-gray-700" href="product-management.php">PRODUCT</a>
-          <a class="block py-2.5 px-4 hover:bg-gray-700" href="#">ORDER</a>
-          <a class="block py-2.5 px-4 hover:bg-gray-700" href="blog-management.php">BLOG</a>
+          <a
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
+            href="user-management.php"
+          >
+            <i class="fas fa-tachometer-alt"> </i>
+            NGƯỜI DÙNG
+          </a>
+          <a
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
+            href="product-management.php"
+          >
+            <i class="fas fa-cube"> </i>
+            SẢN PHẨM
+          </a>
+          <a
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
+            href="order-management.php"
+          >
+            <i class="fas fa-table"> </i>
+            ĐƠN HÀNG
+          </a>
+          <a
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
+            href="blog-management.php"
+          >
+            <i class="fas fa-edit"> </i>
+            TIN TỨC
+          </a>
         </nav>
       </div>
-
-      <!-- Main Content -->
+      <!-- Main content -->
       <div class="flex-1 flex flex-col">
         <!-- Header -->
-        <header class="bg-white py-4 px-6 border-b">
-          <h1 class="text-2xl font-semibold">Order Management</h1>
+        <header
+          class="flex items-center justify-between bg-white py-4 px-6 border-b-2 border-gray-200"
+        >
+          <div class="flex items-center">
+            <input
+              class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none"
+              placeholder="Tìm kiếm"
+              type="text"
+            />
+          </div>
+          <div class="flex items-center space-x-4">
+            <i class="fas fa-bell"> </i>
+            <img
+              alt="User Avatar"
+              class="h-8 w-8 rounded-full"
+              height="30"
+              src="./assets/user/avatar.jpg"
+              width="30"
+            />
+          </div>
         </header>
 
         <!-- Orders Table -->
-        <main class="flex-1 bg-gray-100 p-6">
-          <div class="bg-white rounded-lg shadow-md">
+        <main class="flex-1 bg-white p-6">
+        <div class="flex items-center justify-between">
+            <h1 class="text-3xl font-semibold mb-6">Đơn hàng</h1>
+            </div>
             <table class="min-w-full bg-white">
               <thead class="bg-gray-50">
                 <tr>
                   <th class="py-2 px-4 border-b">ID</th>
-                  <th class="py-2 px-4 border-b">Name</th>
-                  <th class="py-2 px-4 border-b">Phone</th>
-                  <th class="py-2 px-4 border-b">Address</th>
-                  <th class="py-2 px-4 border-b">Shipping</th>
-                  <th class="py-2 px-4 border-b">Payment</th>
-                  <th class="py-2 px-4 border-b">Total</th>
-                  <th class="py-2 px-4 border-b">Status</th>
+                  <th class="py-2 px-4 border-b">Tên</th>
+                  <th class="py-2 px-4 border-b">Số điện thoại</th>
+                  <th class="py-2 px-4 border-b">Địa chỉ</th>
+                  <th class="py-2 px-4 border-b">Vận chuyển</th>
+                  <th class="py-2 px-4 border-b">Thanh toán</th>
+                  <th class="py-2 px-4 border-b">Tổng giá trị</th>
+                  <th class="py-2 px-4 border-b">Tình trạng</th>
                   <th class="py-2 px-4 border-b"></th>
                 </tr>
               </thead>
@@ -113,7 +158,11 @@ $totalPages = ceil($totalOrders / $perPage);
                       <td class="py-2 px-4 border-b"><?= number_format($order['total'], 0, ',', '.') ?>đ</td>
                       <td class="py-2 px-4 border-b"><?= htmlspecialchars($order['status']) ?></td>
                       <td class="py-2 px-4 border-b">
-                        <a class="text-blue-500 underline" href="order-detail.php?orderId=<?= $order['id'] ?>">View</a>
+                        <a href="order-detail.php?orderId=<?= $order['id'] ?>">
+                                        <button class="block rounded px-4 py-1 bg-[#FFEAEA] text-black text-center ">
+                                            Xem
+                                        </button>
+                                    </a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
@@ -128,7 +177,7 @@ $totalPages = ceil($totalOrders / $perPage);
             <!-- Pagination -->
             <div class="flex justify-center mt-4">
               <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                <a href="?page=<?= $i ?>" class="mx-1 px-4 py-2 <?= $i == $page ? 'bg-blue-500 text-white' : 'bg-gray-200' ?> rounded">
+                <a href="?page=<?= $i ?>" class="mx-1 px-4 py-2 <?= $i == $page ? 'bg-[#CE112D] text-white' : 'bg-gray-200' ?> rounded">
                   <?= $i ?>
                 </a>
               <?php endfor; ?>

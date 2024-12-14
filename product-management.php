@@ -70,7 +70,7 @@ if (isset($_SESSION['message'])) {
   <body class="bg-gray-100">
     <div class="flex h-screen">
            <!-- Sidebar -->
-           <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
+           <div class="bg-[#FFEAEA] h-lvh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
@@ -98,7 +98,7 @@ if (isset($_SESSION['message'])) {
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="order-management.php"
           >
             <i class="fas fa-table"> </i>
             ĐƠN HÀNG
@@ -153,7 +153,7 @@ if (isset($_SESSION['message'])) {
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600"> </th>
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">ID</th>
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">TÊN</th>
-                        <th class="py-2 px-4 w-96 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">MÔ TẢ</th>
+                        <th class="py-2 px-4 w-98 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">MÔ TẢ</th>
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">GIÁ</th>
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">SỐ LƯỢNG</th>
                         <th class="py-2 px-4 border-b border-gray-200 text-left text-sm font-semibold text-gray-600">PHÂN LOẠI</th>
@@ -163,7 +163,7 @@ if (isset($_SESSION['message'])) {
                 <tbody>
                     <?php if ($products): ?>
                         <?php foreach($products as $product): ?>
-                            <tr class="py-2 px-4 border-b border-gray-200 text-sm">
+                            <tr class="py-2 px-10 border-b border-gray-200 text-sm text-justify">
                                 <td>
                                     <!-- Hiển thị ảnh đầu tiên -->
                                     <?php if ($product['image_path']): ?>
@@ -180,8 +180,8 @@ if (isset($_SESSION['message'])) {
                                 <td><?= htmlspecialchars($product['category_name'] ?? 'N/A') ?></td>
                                 <td class="text-blue-500 cursor-pointer">
                                     <a href="product-management-detail.php?productId=<?= $product['id'] ?>">
-                                        <button class="block rounded px-4 py-1 bg-blue-500 text-white text-center ">
-                                            Edit
+                                        <button class="block rounded px-4 py-1 bg-[#FFEAEA] text-black text-center ">
+                                            Chỉnh sửa
                                         </button>
                                     </a>
                                 </td>
@@ -195,17 +195,17 @@ if (isset($_SESSION['message'])) {
             <div class="flex justify-center mt-4">
                 <nav class="inline-flex items-center">
                     <?php if ($page > 1): ?>
-                        <a href="?page=<?= $page - 1 ?>" class="px-4 py-2 bg-blue-500 text-white rounded-l-lg">Previous</a>
+                        <a href="?page=<?= $page - 1 ?>" class="px-4 py-2 bg-[#FFEAEA] text-black rounded-l-lg">Previous</a>
                     <?php else: ?>
                         <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded-l-lg">Previous</span>
                     <?php endif; ?>
 
                     <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                        <a href="?page=<?= $i ?>" class="px-4 py-2 <?= $i == $page ? 'bg-blue-500 text-white' : 'bg-white text-gray-600' ?>"><?= $i ?></a>
+                        <a href="?page=<?= $i ?>" class="px-4 py-2 <?= $i == $page ? 'bg-[#CE112D] text-white' : 'bg-white text-gray-600' ?>"><?= $i ?></a>
                     <?php endfor; ?>
 
                     <?php if ($page < $totalPages): ?>
-                        <a href="?page=<?= $page + 1 ?>" class="px-4 py-2 bg-blue-500 text-white rounded-r-lg">Next</a>
+                        <a href="?page=<?= $page + 1 ?>" class="px-4 py-2 bg-[#FFEAEA] text-black rounded-r-lg">Next</a>
                     <?php else: ?>
                         <span class="px-4 py-2 bg-gray-300 text-gray-500 rounded-r-lg">Next</span>
                     <?php endif; ?>
