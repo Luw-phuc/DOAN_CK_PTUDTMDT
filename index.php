@@ -47,13 +47,13 @@ session_start();
         <li><a href="index.php">Trang chủ</a></li>
         <li class="group relative py-4"><a href="product-list.php" class="menu-hover">Cửa hàng</a>
         <div class="text-lg border font-semibold w-60 px-3 invisible  translate-y-[16px] -translate-x-10 bg-[#FDF8F8] absolute z-50 flex flex-col py-0 min-w-48 text-black shadow-xl group-hover:visible ">
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm Cho Nam</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm Cho Nữ</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm chữ, số</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm lủng lẳng</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm đính đá</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Charm dài</ul></div>
-            <div class= "hover:bg-[#CE112D] hover:text-white"><ul>Sample mix sẵn</ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a  href="/product-list.php?categoryId=2">Charm Cho Nam</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=1">Charm Cho Nữ</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=4">Charm chữ, số</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=3">Charm lủng lẳng</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=7">Charm đính đá</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=6">Charm dài</a></ul></div>
+            <div class= "hover:bg-[#CE112D] hover:text-white"><ul><a href="/product-list.php?categoryId=5">Sample mix sẵn</a></ul></div>
           </div></li>
         <li><a href="blog.php">Tin tức</a></li>
         <li><a href="about.php">Về chúng tôi</a></li>
