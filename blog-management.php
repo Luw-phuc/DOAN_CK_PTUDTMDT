@@ -27,45 +27,45 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <body class="bg-gray-100">
     <div class="flex h-screen">
       <!-- Sidebar -->
-      <div class="bg-gray-900 h-vh text-white w-64 space-y-6 py-7 px-2">
+      <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
-            class="h-8 w-8"
-            height="30"
-            src="https://storage.googleapis.com/a1aa/image/FEJbZin0JpKKJNiVCRapiITHPGQisQ0ejxFpXqiVNl0eOZ5TA.jpg"
-            width="30"
+            class="h-8 w-12"
+            height="20"
+            src="./assets/user/logo1.png"
+            width="40"
           />
-          <span class="text-2xl font-extrabold"> Usbibracelet </span>
+          <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
         </div>
         <nav class="space-y-2">
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="user-management.php"
           >
             <i class="fas fa-tachometer-alt"> </i>
-            USER
+            NGƯỜI DÙNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="product-management.php"
           >
             <i class="fas fa-cube"> </i>
-            PRODUCT
+            SẢN PHẨM
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="#"
           >
             <i class="fas fa-table"> </i>
-            ORDER
+            ĐƠN HÀNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="blog-management.php"
           >
             <i class="fas fa-edit"> </i>
-            BLOG
+            TIN TỨC
           </a>
         </nav>
       </div>
@@ -78,7 +78,7 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <div class="flex items-center">
             <input
               class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none"
-              placeholder="Search"
+              placeholder="Tìm kiếm"
               type="text"
             />
           </div>
@@ -88,25 +88,25 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
               alt="User Avatar"
               class="h-8 w-8 rounded-full"
               height="30"
-              src="https://storage.googleapis.com/a1aa/image/MTKO2Sffe3GPdpV1fFlPEDfTgoIYJnACU6dUPZ54eGAyuTWeJA.jpg"
+              src="./assets/user/avatar.jpg"
               width="30"
             />
           </div>
         </header>
         <!-- Dashboard content -->
-        <main class="flex-1 bg-gray-100 p-6">
+        <main class="flex-1 bg-white p-6">
           <div class="flex items-center justify-between">
-            <h1 class="text-3xl font-semibold mb-6">Blog</h1>
+            <h1 class="text-3xl font-semibold mb-6">Tin tức</h1>
             <a href="blog-management-detail.php">
               <button
-                class="w-40 h-12 bg-slate-300 font-semibold border rounded-lg"
+                class="w-40 h-12 bg-[#CE112D] text-white font-semibold border rounded-lg"
               >
-                Add new blog
+                Thêm tin tức mới
               </button>
             </a>
           </div>
           <div
-            class="bg-white mt-5 rounded-lg shadow-md h-[72vh] overflow-hidden"
+            class="bg-white mt-5 rounded-lg shadow-md h-[72vh] overflow-hidden border"
           >
             <!-- blog list -->
             <div class="space-y-4 h-full overflow-auto">
@@ -121,7 +121,7 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   </div>
                 <?php endforeach; ?>
               <?php else: ?>
-                <p class="text-center text-gray-500">No blogs found.</p>
+                <p class="text-center text-gray-500">Không tìm thấy tin tức nào.</p>
               <?php endif; ?>
             </div>
           </div>

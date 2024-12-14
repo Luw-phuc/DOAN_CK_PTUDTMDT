@@ -40,48 +40,49 @@ if ($blogId) {
   <body class="bg-gray-100">
     <div class="flex h-screen">
       <!-- Sidebar -->
-      <div class="bg-gray-900 h-vh text-white w-64 space-y-6 py-7 px-2">
+      <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
-            class="h-8 w-8"
-            height="30"
-            src="https://storage.googleapis.com/a1aa/image/FEJbZin0JpKKJNiVCRapiITHPGQisQ0ejxFpXqiVNl0eOZ5TA.jpg"
-            width="30"
+            class="h-8 w-12"
+            height="20"
+            src="./assets/user/logo1.png"
+            width="40"
           />
-          <span class="text-2xl font-extrabold"> Usbibracelet </span>
+          <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
         </div>
         <nav class="space-y-2">
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="user-management.php"
           >
             <i class="fas fa-tachometer-alt"> </i>
-            USER
+            NGƯỜI DÙNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="product-management.php"
           >
             <i class="fas fa-cube"> </i>
-            PRODUCT
+            SẢN PHẨM
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="#"
           >
             <i class="fas fa-table"> </i>
-            ORDER
+            ĐƠN HÀNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="blog-management.php"
           >
             <i class="fas fa-edit"> </i>
-            BLOG
+            TIN TỨC
           </a>
         </nav>
       </div>
+
       <!-- Main content -->
       <div class="bg-white mx-auto mt-5 rounded-lg shadow-md p-6">
         <?php if (isset($blogId)): ?>
@@ -89,28 +90,28 @@ if ($blogId) {
         <?php endif; ?>
 
         <div class="mb-4">
-          <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+          <label for="title" class="block text-sm font-medium text-gray-700">Tiêu đề</label>
           <input
             type="text"
             id="title"
             class="mt-2 p-3 w-full border border-gray-300 rounded-md"
-            placeholder="Enter blog title"
+            placeholder="Nhập tiêu đề tin tức"
             value="<?= $title ?>"
             required
           />
         </div>
 
         <div class="mb-4 h-[62vh]">
-          <label for="editor" class="block text-sm font-medium text-gray-700">Content</label>
+          <label for="editor" class="block text-sm font-medium text-gray-700">Nội dung</label>
           <div id="editor"><?= $content ?></div>
         </div>
 
         <button
           type="button"
           id="btnSave"
-          class="px-6 py-2 translate-y-14 bg-blue-500 text-white rounded"
+          class="px-6 py-2 translate-y-14 bg-[#CE112D] text-white rounded "
         >
-          <?= isset($blogId) ? 'Update Blog' : 'Create Blog' ?> <!-- Thay đổi tên nút tùy vào trạng thái -->
+          <?= isset($blogId) ? 'Update Blog' : 'Thêm mới tin tức' ?> <!-- Thay đổi tên nút tùy vào trạng thái -->
         </button>
       </div>
     </div>

@@ -66,7 +66,7 @@ if (isset($_SESSION['message'])) {
           </a>
           <a
             class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
-            href="#"
+            href="blog-management.php"
           >
             <i class="fas fa-edit"> </i>
             TIN TỨC

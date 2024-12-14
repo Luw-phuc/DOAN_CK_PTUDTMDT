@@ -70,62 +70,77 @@ if (isset($_GET['productId'])) {
   </head>
   <body class="bg-gray-100">
     <div class="flex h-screen">
-      <!-- Sidebar -->
-      <div class="bg-gray-900 h-vh text-white w-64 space-y-6 py-7 px-2">
+           <!-- Sidebar -->
+           <div class="bg-[#FFEAEA] h-vh text-white w-64 space-y-6 py-7 px-2">
         <div class="flex items-center space-x-2 px-4">
           <img
             alt="Logo"
-            class="h-8 w-8"
-            height="30"
-            src="https://storage.googleapis.com/a1aa/image/FEJbZin0JpKKJNiVCRapiITHPGQisQ0ejxFpXqiVNl0eOZ5TA.jpg"
-            width="30"
+            class="h-8 w-12"
+            height="20"
+            src="./assets/user/logo1.png"
+            width="40"
           />
-          <span class="text-2xl font-extrabold"> Usbibracelet </span>
+          <span class="text-2xl font-extrabold text-[#CE112D]"> Usbibracelet </span>
         </div>
         <nav class="space-y-2">
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="user-management.php"
           >
             <i class="fas fa-tachometer-alt"> </i>
-            USER
+            NGƯỜI DÙNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="product-management.php"
           >
             <i class="fas fa-cube"> </i>
-            PRODUCT
+            SẢN PHẨM
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="#"
           >
             <i class="fas fa-table"> </i>
-            ORDER
+            ĐƠN HÀNG
           </a>
           <a
-            class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
+            class="text-black block py-2.5 px-4 rounded transition duration-200 hover:bg-[#CE112D] hover:text-white"
             href="blog-management.php"
           >
             <i class="fas fa-edit"> </i>
-            BLOG
+            TIN TỨC
           </a>
         </nav>
       </div>
-
       <!-- Main content -->
       <div class="flex-1 flex flex-col">
         <!-- Header -->
-        <header class="flex items-center justify-between bg-white py-4 px-6 border-b-2 border-gray-200">
+        <header
+          class="flex items-center justify-between bg-white py-4 px-6 border-b-2 border-gray-200"
+        >
           <div class="flex items-center">
-            <input class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none" placeholder="Search" type="text" />
+            <input
+              class="bg-gray-100 rounded-lg px-4 py-2 focus:outline-none"
+              placeholder="Tìm kiếm"
+              type="text"
+            />
           </div>
           <div class="flex items-center space-x-4">
             <i class="fas fa-bell"> </i>
-            <img alt="User Avatar" class="h-8 w-8 rounded-full" height="30" src="https://storage.googleapis.com/a1aa/image/MTKO2Sffe3GPdpV1fFlPEDfTgoIYJnACU6dUPZ54eGAyuTWeJA.jpg" width="30" />
+            <img
+              alt="User Avatar"
+              class="h-8 w-8 rounded-full"
+              height="30"
+              src="./assets/user/avatar.jpg"
+              width="30"
+            />
           </div>
         </header>
+
+      <!-- Main content -->
+      <div class="flex-1 flex flex-col">
+
 
         <!-- Product Management Form -->
         <main class="flex-1 bg-gray-100 p-6">
