@@ -3,11 +3,15 @@ session_start();
 require_once "./include/db.inc.php";
 
 // Truy vấn tất cả các bài viết của người dùng
-$stmt = $pdo->prepare("SELECT id, title, timestamp FROM blog ORDER BY timestamp DESC");
+$stmt = $pdo->prepare("SELECT id, title, timestamp, isDeleted FROM blog WHERE isDeleted = false ORDER BY timestamp DESC");
 $stmt->execute();
 
 // Lấy tất cả bài viết vào một mảng
 $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if (isset($_SESSION['message'])) {
+  echo "<script>alert('" . $_SESSION['message'] . "')</script>";
+  unset($_SESSION['message']);
+}
 ?>
 <html lang="en">
   <head>
@@ -117,7 +121,10 @@ $blogs = $stmt->fetchAll(PDO::FETCH_ASSOC);
                       <h2 class="text-xl font-semibold"><?= htmlspecialchars($blog['title']) ?></h2>
                       <span class="text-sm text-gray-500"><?= date("F j, Y", strtotime($blog['timestamp'])) ?></span>
                     </div>
-                    <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-[#CE112D]">Chỉnh sửa</a>
+                    <div class="flex space-x-4">
+                          <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-blue-500">Edit</a>
+                          <a href="./include/delete-blog.inc.php?blogId=<?= $blog['id'] ?>" class="text-red-500" onclick="return confirm('Are you sure you want to delete this blog?');">Delete</a>
+                      </div>
                   </div>
                 <?php endforeach; ?>
               <?php else: ?>
