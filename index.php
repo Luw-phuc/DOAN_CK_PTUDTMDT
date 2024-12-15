@@ -32,6 +32,7 @@ session_start();
         </form>
         <div class="flex items-center gap-1">
         <?php
+        // Kiểm tra xem người dùng đã đăng nhập chưa
           if (isset($_SESSION["user_name"])) {
             echo "<a href='cart.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Giỏ hàng</button></a>";
             echo "<form method='post' action='include/logout.inc.php'><button class='rounded-lg border bg-[#FFEAEA] px-6 py-2 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng xuất</button></form>";
@@ -106,63 +107,56 @@ session_start();
       <div class="mt-8 grid w-full grid-cols-7 gap-8">
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a  href="product-list.php?categoryId=1">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmchonu.png"
-            /></a>
+            />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=1">Charm Cho Nữ</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm cho nữ</p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=2">
-            <img class="h-full w-full" src="./assets/Category/Charmchonam.png"></a>
+            <img class="h-full w-full" src="./assets/Category/Charmchonam.png">
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a  href="product-list.php?categoryId=2">Charm Cho Nam</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm cho nam</p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=4">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmchuso.png"
-            /></a>
+            />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=4">Charm chữ, số</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm chữ, số</p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=3">
-            <img class="h-full w-full" src="./assets/Category/Charmlunglang.png" /></a>
+            <img class="h-full w-full" src="./assets/Category/Charmlunglang.png" />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=3">Charm lủng lẳng</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm lủng lẳng</p>
         </div><div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=7">
             <img
               class="h-full w-full"
               src="./assets/Category/Charmdinhda.png"
-            /></a>
+            />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=7">Charm đính đá</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm đính đá</p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=6">
-            <img class="h-full w-full" src="./assets/Category/Charmdai.png" /></a>
+            <img class="h-full w-full" src="./assets/Category/Charmdai.png" />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=6">Charm dài</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Charm dài</p>
         </div>
         <div class="flex flex-col items-center">
           <div class="h-25 w-25">
-          <a href="product-list.php?categoryId=5">
             <img
               class="h-full w-full"
               src="./assets/Category/Samplemixsan.png"
-            /></a>
+            />
           </div>
-          <p class="mt-2 text-lg text-center font-bold"><a href="product-list.php?categoryId=5">Sample mix sẵn</a></p>
+          <p class="mt-2 text-lg text-center font-bold">Sample mix sẵn</p>
         </div>
       </div>
     </div>
@@ -183,14 +177,14 @@ session_start();
             > <img src="./assets/images/Charmchonam/Charm Logo Ferrari 59k.jpg" />
           </div>
             <div class="mt-3 px-3">
-              <a href="product-detail.php?productId=11" class="font-bold">Logo Ferrari</a>
+              <a href="product-detail.php?productId=1" class="font-bold">Logo Ferrari</a>
               <p class="mt-1">59.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
                   <img src="./assets/images/star.svg" />
                 </div>
                 <p class="translate-y-0.5">(25)</p>
@@ -202,14 +196,14 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmchonu/Charm hoa Tulip hồng 55k.jpg"/></div>
             <div class="mt-3 px-3">
-            <a href="product-detail.php?productId=3" class="font-bold">Hoa Tulip hồng</a>
+              <p class="font-bold">Hoa Tulip hồng</p>
               <p class="mt-1">55.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
                   <img src="./assets/images/star.svg" />
                 </div>
                 <p class="translate-y-0.5">(30)</p>
@@ -221,15 +215,15 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Samplemixsan/Vòng tay Sample Family 499k.png"/></div>
             <div class="mt-3 px-3">
-            <a href="product-detail.php?productId=37" class="font-bold">Vòng tay Sample Family</a>
+              <p class="font-bold">Vòng tay Sample Family</p>
               <p class="mt-1">499.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star.svg" />
                 </div>
                 <p class="translate-y-0.5">(29)</p>
               </div>
@@ -240,14 +234,14 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmdai/Charm I Love My Family 89k.png"/></div>
             <div class="mt-3 px-3">
-            <a href="product-detail.php?productId=46" class="font-bold">I Love My Family</a>
+              <p class="font-bold">I Love My Family</p>
               <p class="mt-1">89.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
-                  <img src="./assets/images/star.png" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
+                  <img src="./assets/images/star-yellow.svg" />
                   <img src="./assets/images/star.svg" />
                 </div>
                 <p class="translate-y-0.5">(17)</p>
@@ -334,15 +328,11 @@ session_start();
             <p class="font-bold text-4xl text-[#CE112D]">THE LOVE OF MINE</p>
             <p class="text-xl mt-5 max-w-[650px] text-justify">Tặng đồ trang sức tôn vinh gia đình không chỉ là một món quà có giá trị mà còn là một hành động mang ý nghĩa sâu sắc, giàu cảm xúc và đong đầy những giá trị tinh thần: nó không dừng lại ở khía cạnh vật chất, mà còn vượt lên để trở thành biểu tượng hữu hình của tình yêu thương, sự gắn bó keo sơn và lòng biết ơn chân thành đối với những người thân yêu trong gia đình.</p>  
           </div>
-          <div class="text-center bg-[#FDF8F8]  rounded-lg hover:bg-[#FCE4E4] transition duration-300">
-  <a href="blogdetail.php?blogId=3" 
-     class="text-2xl font-bold text-white bg-[#CE112D] px-5 py-3 rounded animate-bounce hover:text-white block">
-    ĐỌC NGAY
-  </a>
-</div>
+          <div>
+            <button class="text-2xl font-bold text-white bg-[#CE112D] px-5 py-3 rounded animate-bounce hover:text-white">ĐỌC NGAY</button>
+          </div>
         </div>
       </div>
-      
       <div class="w-4/5 mx-auto mt-16">
         <h1 class="font-bold text-5xl text-center text-[#CE112D]">KHÁM PHÁ USBIBRACELET</h1>
         <div class="mt-10 grid grid-cols-3 gap-10">
@@ -354,7 +344,7 @@ session_start();
       /></div>
             <div class="mt-6 text-center">
               <h1 class="text-2xl font-bold">LOVE X USBI</h1>
-              <a href="blogdetail.php?blogId=1" class="mt-2 underline italic">Khám phá ngay</a>
+              <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
           <div>
@@ -365,7 +355,7 @@ session_start();
       /> </div>
             <div class="mt-6 text-center">
               <h1 class="text-2xl font-bold">BRACESUCCEESS</h1>
-              <a href="blogdetail.php?blogId=7" class="mt-2 underline italic">Khám phá ngay</a>
+              <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
           <div>
@@ -376,7 +366,7 @@ session_start();
       /> </div>
             <div class="mt-6 text-center">
               <h1 class="text-2xl font-bold">MY MUSE</h1>
-              <a href="blogdetail.php?blogId=6" class="mt-2 underline italic">Khám phá ngay</a>
+              <a class="mt-2 underline italic">Khám phá ngay</a>
             </div>
           </div>
         </div>
@@ -395,7 +385,7 @@ session_start();
       </div>
       <div class="flex flex-col items-center">
         <div class="h-24 w-1/2">
-          <img class="h-full w-full" src="https://cuoihoihungthinh.com/wp-content/uploads/2021/09/support-icon.png"/>
+          <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
         </div>
         <div class="text-center mt-5">
           <p class="font-bold text-2xl">Hỗ trợ 24/7</p>
@@ -404,7 +394,7 @@ session_start();
       </div>
       <div class="flex flex-col items-center">
         <div class="h-24 w-1/2">
-          <img class="h-full w-full" src="https://static.vecteezy.com/system/resources/previews/003/781/164/non_2x/1-year-warranty-icon-isolated-on-white-background-vector.jpg"/>
+          <img class="h-full w-full" src="https://lamha.com.vn/image/cache/catalog/blog/khuyen-mai/free_shipping_PNG2-640x360.png"/>
         </div>
         <div class="text-center mt-5">
           <p class="font-bold text-2xl">Bảo hành tuyệt đối</p>
