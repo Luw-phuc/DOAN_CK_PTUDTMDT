@@ -122,8 +122,8 @@ if (isset($_SESSION['message'])) {
                       <span class="text-sm text-gray-500"><?= date("F j, Y", strtotime($blog['timestamp'])) ?></span>
                     </div>
                     <div class="flex space-x-4">
-                          <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-blue-500">Edit</a>
-                          <a href="./include/delete-blog.inc.php?blogId=<?= $blog['id'] ?>" class="text-red-500" onclick="return confirm('Are you sure you want to delete this blog?');">Delete</a>
+                          <a href="blog-management-detail.php?blogId=<?= $blog['id'] ?>" class="text-blue-500">Chỉnh sửa</a>
+                          <a href="./include/delete-blog.inc.php?blogId=<?= $blog['id'] ?>" class="text-red-500" onclick="return confirm('Are you sure you want to delete this blog?');">Xóa</a>
                       </div>
                   </div>
                 <?php endforeach; ?>

@@ -174,7 +174,7 @@ if (isset($_SESSION['message'])) {
                       </a>
                       <a href="./include/delete-user.inc.php?account_id=<?= $account['id'] ?>" onclick="return confirm('Are you sure you want to delete this user?');">
                           <button   
-                            class="rounded-md bg-red-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-400 focus:shadow-none active:bg-red-400 hover:bg-red-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+                            class="rounded-md bg-[#CE112D] py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-red-400 focus:shadow-none active:bg-red-400 hover:bg-red-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
                             Delete
                           </button>
                         </a>

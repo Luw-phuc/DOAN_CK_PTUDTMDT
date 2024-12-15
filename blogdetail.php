@@ -2,16 +2,18 @@
   session_start();
   require_once "include/db.inc.php";
 
+
   // Kiểm tra nếu có blogId trong URL
   if (isset($_GET['blogId'])) {
     $blogId = (int)$_GET['blogId'];
+
 
     // Truy vấn cơ sở dữ liệu để lấy thông tin bài viết, bao gồm ngày đăng
     $sql = "SELECT * FROM blog WHERE id = :blogId";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':blogId', $blogId, PDO::PARAM_INT);
     $stmt->execute();
-    
+   
     // Kiểm tra nếu có kết quả trả về
     if ($stmt->rowCount() > 0) {
       $blog = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -24,10 +26,12 @@
     exit;
   }
 
+
   // Chuyển đổi ngày đăng thành định dạng dễ đọc
   $createdAt = new DateTime($blog['timestamp']);
   $formattedDate = $createdAt->format('d-m-Y H:i:s');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +69,7 @@
             echo "<button id='btn_login' onclick=\"window.location.href='login.php'\" class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng nhập</button>";
             echo "<button class='rounded-lg border bg-[#FFEAEA] px-6 py-3 font-bold hover:bg-[#CE112D] hover:animate-bounce duration-800 hover:text-white'>Đăng ký</button>";
           }
-          ?> 
+          ?>
       </div>
     </div>
     <div class="bg-[#FFEAEA]">
@@ -90,6 +94,7 @@
     </div>
     <!-- end header -->
 
+
   <!-- Render Blog Detail -->
 <div class="px-10 py-10 rounded-lg shadow-md max-w-5xl mx-auto">
   <h2 class="text-4xl font-bold text-[#CE112D]"><?= $blog['title']; ?></h2>
@@ -100,6 +105,8 @@
     <?= $blog['content']; ?>
   </div>
 </div>
+
+
 
 
     <!-- footer -->
@@ -167,6 +174,8 @@
 </div>
 <!-- end footer -->
 
+
     <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>
+

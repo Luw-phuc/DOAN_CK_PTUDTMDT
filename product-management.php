@@ -176,13 +176,13 @@ if (isset($_SESSION['message'])) {
                       <td><?= htmlspecialchars($product['category_name'] ?? 'N/A') ?></td>
                       <td class="text-blue-500 cursor-pointer flex h-full items-center gap-2">
                         <a href="product-management-detail.php?productId=<?= $product['id'] ?>">
-                          <button class="block rounded px-4 py-1 bg-blue-500 text-white text-center">
-                            Edit
+                          <button class="block rounded px-4 py-1 bg-[#FFEAEA] text-black text-center">
+                            Chỉnh sửa
                           </button>
                         </a>
                         <a href="./include/delete-product.inc.php?productId=<?= $product['id'] ?>" onclick="return confirm('Are you sure you want to delete this product?');">
-                          <button class="block rounded px-4 py-1 bg-red-500 text-white text-center">
-                            Delete
+                          <button class="block rounded px-4 py-1 bg-[#CE112D] text-white text-center">
+                            Xóa
                           </button>
                         </a>
                       </td>

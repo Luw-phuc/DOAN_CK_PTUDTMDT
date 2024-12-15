@@ -177,7 +177,7 @@ session_start();
             > <img src="./assets/images/Charmchonam/Charm Logo Ferrari 59k.jpg" />
           </div>
             <div class="mt-3 px-3">
-              <a href="product-detail.php?productId=1" class="font-bold">Logo Ferrari</a>
+              <a href="product-detail.php?productId=11" class="font-bold">Logo Ferrari</a>
               <p class="mt-1">59.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
@@ -328,9 +328,12 @@ session_start();
             <p class="font-bold text-4xl text-[#CE112D]">THE LOVE OF MINE</p>
             <p class="text-xl mt-5 max-w-[650px] text-justify">Tặng đồ trang sức tôn vinh gia đình không chỉ là một món quà có giá trị mà còn là một hành động mang ý nghĩa sâu sắc, giàu cảm xúc và đong đầy những giá trị tinh thần: nó không dừng lại ở khía cạnh vật chất, mà còn vượt lên để trở thành biểu tượng hữu hình của tình yêu thương, sự gắn bó keo sơn và lòng biết ơn chân thành đối với những người thân yêu trong gia đình.</p>  
           </div>
-          <div>
-            <button class="text-2xl font-bold text-white bg-[#CE112D] px-5 py-3 rounded animate-bounce hover:text-white">ĐỌC NGAY</button>
-          </div>
+          <div class="text-center bg-[#FDF8F8] p-5 rounded-lg  transition duration-300">
+  <a href="http://localhost/daptud/blogdetail.php?blogId=3" 
+     class="text-2xl font-bold text-white bg-[#CE112D] px-5 py-3 rounded animate-bounce hover:text-white block">
+    ĐỌC NGAY
+  </a>
+</div>
         </div>
       </div>
       <div class="w-4/5 mx-auto mt-16">
