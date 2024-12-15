@@ -202,7 +202,7 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmchonu/Charm hoa Tulip hồng 55k.jpg"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">Hoa Tulip hồng</p>
+            <a href="product-detail.php?productId=3" class="font-bold">Hoa Tulip hồng</a>
               <p class="mt-1">55.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
@@ -221,7 +221,7 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Samplemixsan/Vòng tay Sample Family 499k.png"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">Vòng tay Sample Family</p>
+            <a href="product-detail.php?productId=37" class="font-bold">Vòng tay Sample Family</a>
               <p class="mt-1">499.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
@@ -240,7 +240,7 @@ session_start();
               class="h-3/4 w-full]"
             ><img src="./assets/images/Charmdai/Charm I Love My Family 89k.png"/></div>
             <div class="mt-3 px-3">
-              <p class="font-bold">I Love My Family</p>
+            <a href="product-detail.php?productId=46" class="font-bold">I Love My Family</a>
               <p class="mt-1">89.000 VND</p>
               <div class="flex items-center gap-2">
                 <div class="mt-1 flex gap-2">
