@@ -68,7 +68,7 @@ session_start();
       <div class="flex justify-center mt-4">
           <img src="./assets/checkoutsuccess/tick.png" alt="Success Icon" class="w-32 h-32 object-contain">
       </div>
-      <h3 class="mt-6 text-2xl">Tổng giá trị đơn hàng: 100.000 VNĐ</h3>
+      <h3 class="mt-6 text-2xl">Tổng giá trị đơn hàng: <?= $_SESSION['total'] ?></h3>
       <h3 class="mt-2 text-2xl">Mã đơn hàng: <?= $_SESSION['order_id'] ?></h3>
       <div class="mt-10 grid grid-cols-2 gap-10">
         <button

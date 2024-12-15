@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $result = $stmtOrder->fetch(PDO::FETCH_ASSOC);
         $total = $result['total'];
+        $_SESSION['total'] = $total;
         if ($result) {
             if ($result['shippingMethod'] == 'grab') {
                 $shippingFee -= 20000;
