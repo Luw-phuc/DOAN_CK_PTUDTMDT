@@ -72,7 +72,8 @@ session_start();
             <h1 class="text-3xl font-bold text-[#CE112D]">LIÊN HỆ USBI</h1>
           <p class="mt-2 text-lg/8 text-gray-600">Usbi sẽ phản hồi tin nhắn của bạn trong vòng 24h.</p>
         </div>
-        <form action="#" method="POST" class="mx-auto mt-5 max-w-xl sm:mt-15">
+        <form id="contactForm" action="#" method="POST" class="mx-auto mt-5 max-w-xl sm:mt-15">
+        
           <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Họ</label>
@@ -131,13 +132,26 @@ session_start();
               </label>
             </div>
           </div>
-          <div class="mt-10">
-            <button
-            class="w-full rounded-lg bg-[#CE112D] py-2 text-white hover:bg-red-700"
-            type="submit">
-            Gửi liên hệ
-          </button>
-      </div>
+          <!-- Thêm id vào form -->
+
+  <!-- Nội dung form như cũ -->
+  <div class="mt-10">
+    <button
+      class="w-full rounded-lg bg-[#CE112D] py-2 text-white hover:bg-red-700"
+      type="submit">
+      Gửi liên hệ
+    </button>
+  </div>
+</form>
+
+<!-- JavaScript để xử lý thông báo -->
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Ngăn form gửi đi để demo thông báo
+    alert("Bạn đã gửi liên hệ cho cửa hàng. Cám ơn bạn!");
+    this.reset(); // Xóa dữ liệu form (tuỳ ý)
+  });
+</script>
     </div>
 </div>
 
