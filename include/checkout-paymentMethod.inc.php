@@ -30,6 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $stmtCard->bindParam(":expiry", $cardExpiry);
                 $stmtCard->bindParam(":cvv", $cardCvv);
                 $stmtCard->execute() ;
+            } else {
+                $stmtCard = $pdo->prepare("UPDATE account SET credential = null WHERE id = :id");
+                $stmtCard->bindParam(":id", $_SESSION["user_id"]);
+                $stmtCard->execute() ;
             }
         }
 
