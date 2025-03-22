@@ -223,6 +223,32 @@ if (isset($_SESSION['cart'])) {
                     <label for="momo" class="-translate-y-0.5">Momo</label>
                   </div>
                 </div>
+                <div class="flex mt-1 justify-between flex-col">
+                  <div class="flex gap-5">
+                    <input id="visa" value="visa" type="radio" name="paymentMethod" class="bg-red-500" />
+                    <label for="visa" class="-translate-y-0.5">Visa</label>
+                  </div>
+                  <div id="card-form" class="card_container hidden mt-3 ml-5">
+                    <div id="card-name-field-container">
+                      <input type="text" placeholder="Card Holder Name" id="card-holder-name" name="card-holder-name" class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    </div>
+                    <div id="card-number-field-container" class="mt-2">    
+                      <input type="text" placeholder="Card Number" id="card-number" name="card-number" class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    </div>
+                    <div class="grid grid-cols-2 gap-5 mt-2">
+                      <div id="card-expiry-field-container">    
+                        <input type="text" placeholder="Card Expiry" id="card-expiry" name="card-expiry" class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                      </div>
+                      <div id="card-cvv-field-container">    
+                        <input type="number" placeholder="Card Cvv" id="card-cvv" name="card-cvv" class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                      </div>
+                    </div>
+                    <div class="mt-3">
+                      <input type="checkbox" id="save-info" name="save-info"/>
+                      <label for="save-info">Lưu thông tin thanh toán</label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="flex justify-end gap-7">
@@ -316,20 +342,190 @@ if (isset($_SESSION['cart'])) {
       const cod = document.getElementById("cod");
       const bank = document.getElementById("bank");
       const momo = document.getElementById("momo");
+      const visa = document.getElementById("visa");
+      const cardForm = document.getElementById("card-form");
 
       cod.addEventListener("click", () => {
         bank.checked = false;
         momo.checked = false;
+        visa.checked = false;
+        cardForm.classList.add("hidden");
       });
       bank.addEventListener("click", () => {
         cod.checked = false;
         momo.checked = false;
+        visa.checked = false;
+        cardForm.classList.add("hidden");
       });
       momo.addEventListener("click", () => {
         cod.checked = false;
         bank.checked = false;
+        visa.checked = false;
+        cardForm.classList.add("hidden");
+      });
+      visa.addEventListener("click", () => {
+        bank.checked = false;
+        cod.checked = false;
+        momo.checked = false;
+        validate.a();
+        cardForm.classList.remove("hidden");
       });
 
-    </script>
+      // (A) HELPER FUNCTIONS
+      var helper = {
+        // (A1) ARRAY BUFFER TO BASE 64
+        atb: (b) => {
+          let u = new Uint8Array(b),
+            s = "";
+          for (let i = 0; i < u.byteLength; i++) {
+            s += String.fromCharCode(u[i]);
+          }
+          return btoa(s);
+        },
+
+        // (A2) BASE 64 TO ARRAY BUFFER
+        bta: (o) => {
+          let pre = "=?BINARY?B?",
+            suf = "?=";
+          for (let k in o) {
+            if (typeof o[k] == "string") {
+              let s = o[k];
+              if (
+                s.substring(0, pre.length) == pre &&
+                s.substring(s.length - suf.length) == suf
+              ) {
+                let b = window.atob(
+                    s.substring(pre.length, s.length - suf.length)
+                  ),
+                  u = new Uint8Array(b.length);
+                for (let i = 0; i < b.length; i++) {
+                  u[i] = b.charCodeAt(i);
+                }
+                o[k] = u.buffer;
+              }
+            } else {
+              helper.bta(o[k]);
+            }
+          }
+        },
+
+        // (A3) AJAX FETCH
+        ajax: (url, data, after) => {
+          let form = new FormData();
+          for (let [k, v] of Object.entries(data)) {
+            form.append(k, v);
+          }
+          fetch(url, { method: "POST", body: form })
+            .then((res) => res.text())
+            .then((res) => after(res))
+            .catch((err) => {
+              alert("ERROR!");
+              console.error(err);
+            });
+        },
+      };
+
+      // (B) REGISTRATION
+      var register = {
+        // (B1) CREATE CREDENTIALS
+        a: () =>
+          helper.ajax(
+            "register.php",
+            {
+              phase: "a",
+            },
+            async (res) => {
+              try {
+                res = JSON.parse(res);
+                helper.bta(res);
+                register.b(await navigator.credentials.create(res));
+              } catch (e) {
+                alert(res);
+                console.error(e);
+              }
+            }
+          ),
+
+        // (B2) SEND CREDENTIALS TO SERVER
+        b: (cred) =>
+          helper.ajax(
+            "register.php",
+            {
+              phase: "b",
+              transport: cred.response.getTransports
+                ? cred.response.getTransports()
+                : null,
+              client: cred.response.clientDataJSON
+                ? helper.atb(cred.response.clientDataJSON)
+                : null,
+              attest: cred.response.attestationObject
+                ? helper.atb(cred.response.attestationObject)
+                : null,
+            },
+            (res) => alert(res)
+          ),
+      };
+
+      // (C) VALIDATION
+      var validate = {
+        // (C1) GET CREDENTIALS
+        a: () =>
+          helper.ajax(
+            "validate.php",
+            {
+              phase: "a",
+            },
+            async (res) => {
+              try {
+                res = JSON.parse(res);
+                helper.bta(res);
+                validate.b(await navigator.credentials.get(res));
+              } catch (e) {
+                if (res) {
+                  alert(res);
+                }
+                console.error(e);
+              }
+            }
+          ),
+
+        // (C2) SEND TO SERVER & VALIDATE
+        b: (cred) =>
+          helper.ajax(
+            "validate.php",
+            {
+              phase: "b",
+              id: cred.rawId ? helper.atb(cred.rawId) : null,
+              client: cred.response.clientDataJSON
+                ? helper.atb(cred.response.clientDataJSON)
+                : null,
+              auth: cred.response.authenticatorData
+                ? helper.atb(cred.response.authenticatorData)
+                : null,
+              sig: cred.response.signature
+                ? helper.atb(cred.response.signature)
+                : null,
+              user: cred.response.userHandle
+                ? helper.atb(cred.response.userHandle)
+                : null,
+            },
+            (res) => {
+              const response = JSON.parse(res);
+
+              document.getElementById("card-holder-name").value = response.cardholder_name;
+              document.getElementById("card-number").value = response.card_number;
+              document.getElementById("card-expiry").value = response.expiry;
+              document.getElementById("card-cvv").value = Number(response.cvv);
+              document.getElementById("save-info").checked = true;              
+            }
+          ),
+      };
+   
+      document.getElementById("save-info").addEventListener("click", () => {
+        if (document.getElementById("save-info").checked) {
+          register.a();
+        }
+      });
+   </script>
   </body>
 </html>
