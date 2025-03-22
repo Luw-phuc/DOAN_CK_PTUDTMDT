@@ -1,5 +1,0 @@
-O:8:"stdClass":15:{s:4:"rpId";s:9:"localhost";s:17:"attestationFormat";s:4:"none";s:12:"credentialId";s:20:"—+ÿ›`IgL]≤fãeK“ç#—";s:19:"credentialPublicKey";s:178:"-----BEGIN PUBLIC KEY-----
-MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmASDS2gqdaUPpZszf5NrENTjSjt9
-i1l8P6faaPu+Hppoj99C8SnF/tX/QpWtURJb66b7Qk7zQDr2/eR1v78qtw==
------END PUBLIC KEY-----
-";s:16:"certificateChain";N;s:11:"certificate";N;s:17:"certificateIssuer";s:0:"";s:18:"certificateSubject";s:0:"";s:16:"signatureCounter";N;s:6:"AAGUID";s:16:"˚¸0NNÃånW◊Ω";s:9:"rootValid";N;s:11:"userPresent";b:1;s:12:"userVerified";b:1;s:16:"isBackupEligible";b:1;s:10:"isBackedUp";b:1;}
